@@ -1,0 +1,57 @@
+<header class="bg-light shadow-sm px-3 py-2 d-flex align-items-center">
+    <div class="menu-container d-flex align-items-center flex-grow-1">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/inicio">INICIO</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkEsquites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                ESQUITES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkEsquites">
+                                <li><a class="dropdown-item" routerLink="/esquites/original">Original</a></li>
+                                <li><a class="dropdown-item" routerLink="/esquites/tortrix">Tortrix</a></li>
+                                <li><a class="dropdown-item" routerLink="/esquites/diana">Diana</a></li>
+                                <li><a class="dropdown-item" routerLink="/esquites/senorial">Señorial</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSalsas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SALSAS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkSalsas">
+                                <li><a class="dropdown-item" routerLink="/salsas/casera">Casera</a></li>
+                                <li><a class="dropdown-item" routerLink="/salsas/chipotle">Chipotle</a></li>
+                                <li><a class="dropdown-item" routerLink="/salsas/mayochipotle">MayoChipotle</a></li>
+                                <li><a class="dropdown-item" routerLink="/salsas/verde">Verde</a></li>
+                                <li><a class="dropdown-item" routerLink="/salsas/laesquitera">La Esquitera</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/eventos">EVENTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/sucursales">SUCURSALES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/sobrenosotros">SOBRE NOSOTROS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div *ngIf="showLogo" class="logo-container d-flex justify-content-center align-items-center col-2">
+      <img src="/assets/images/logo.png" alt="Logo" class="img-fluid">
+    </div>
+    <ng-template #noLogo>
+        <div class="logo-placeholder d-flex justify-content-center align-items-center"></div>
+    </ng-template>
+    <div class="right-space col-3"></div>
+</header>
