@@ -1,0 +1,94 @@
+.footer-info {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hover-effect {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.hover-effect:hover {
+    color: #fff;
+    text-shadow: 0 0 8px yellow;
+}
+
+.hover-effect::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: #ffc936;
+    transition: all 0.3s ease;
+}
+
+.hover-effect:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px yellow;
+}
+
+.social-icons a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: #ffc936;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.social-icons fa-icon {
+    font-size: 26px;
+    transition: font-size 0.3s ease;
+}
+
+.social-icons fa-icon:hover {
+    font-size: 32px;
+    transition: font-size 0.3s ease;
+}
+
+.king-title {
+    animation: text-anim 0.1s infinite;
+    text-shadow: 0 0 5px #ffc936, 0 0 10px #ffc936, 0 0 20px #ffc936, 0 0 40px #ffc936;
+}
+
+@keyframes text-anim {
+    from {
+        text-shadow: 0 0 5px #ffc936, 0 0 10px #ffc936, 0 0 20px #ffc936, 0 0 40px #ffc936;
+        color: white;
+    }
+    to {
+        text-shadow: 0 0 5px yellow, 0 0 10px #ffd666, 0 0 20px orange, 0 0 100px orange;
+    }
+}
