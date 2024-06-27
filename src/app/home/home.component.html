@@ -1,17 +1,12 @@
-<app-main-section
-  [title]="'HELADO'"
-  [subtitle]="'Artesanal'"
-  [imageUrl]="'/assets/images/logo.png'"
-  [buttonTitle]="'Botón'"
-  [backgroundColor]="'rgba(8, 255, 239, 0.911)'">
-</app-main-section>
-<app-main-section
-  [title]="'HELADO'"
-  [subtitle]="'Artesanal'"
-  [imageUrl]="'/assets/images/logo.png'"
-  [buttonTitle]="'Botón'"
-  [backgroundColor]="'rgba(8, 255, 239, 0.911)'">
-</app-main-section>
+<div class="section-main">
+  <app-main-section
+    [title]="'HELADO'"
+    [subtitle]="'Artesanal'"
+    [imageUrl]="'/assets/images/logo.png'"
+    [buttonTitle]="'Botón'"
+    [backgroundColor]="'rgb(24 45 222 / 82%)'">
+  </app-main-section>
+</div>
   <div class="section-esquites">
     <app-feature-section
     [title]="'Nuestros Sabores'"
@@ -21,7 +16,29 @@
                     Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
                     '"
     [esquitesTortrixCards]="esquitesTortrixCards"
+    [reverseOrder]="true"
+    >
+    </app-feature-section>
+  </div>
+  <div class="section-sauces">
+    <app-main-section
+      [title]="'Salsas'"
+      [subtitle]="'Artesanales'"
+      [imageUrl]="'/assets/images/logo.png'"
+      [buttonTitle]="'Menú'"
+      [backgroundColor]="'rgb(226 17 17 / 79%)'">
+    </app-main-section>
+  </div>
+  <div class="carousel-section-sauces">
+    <app-feature-section
+    [title]="'Nuestros Sabores'"
+    [subtitle]="'¡Fresco y sabroso!'"
+    [description]="'Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+                    '"
     [esquitesDianaCards]="esquitesDianaCards"
+    [reverseOrder]="true"
     >
     </app-feature-section>
   </div>

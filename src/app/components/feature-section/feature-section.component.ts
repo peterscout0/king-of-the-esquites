@@ -16,6 +16,7 @@ export class FeatureSectionComponent {
   @Input() title!: string;
   @Input() subtitle!: string;
   @Input() description!: string;
+  @Input() reverseOrder: boolean = false;
   @Input() esquitesDianaCards: SwiperCard[] = [];
   @Input() esquitesTortrixCards: SwiperCard[] = [];
 }

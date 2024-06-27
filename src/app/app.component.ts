@@ -15,6 +15,7 @@ import { SwiperCard } from './models/swiper-card.model';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title = "king-of-the-esquites";
 
   addresses = [
     { line1: "Carretera Interamericana zona 4", line2: "Jutiapa, Jutiapa" },

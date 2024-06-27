@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.title-carousel {
+  align-self: flex-start;
+  font-weight: 700;
+}
+
 .carousel-container {
   display: flex;
   align-items: center;

@@ -14,6 +14,13 @@
     position: relative;
     z-index: 2;
   }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-items: center;
+  }
   
   .center-image {
     position: absolute;
@@ -34,4 +41,9 @@
     font-size: 7em;
     color: #333;
     margin: 0.5em 0;
+  }
+
+  .button-container {
+    /* display: inline-block; */
+    margin-top: 20px;
   }
