@@ -1,0 +1,12 @@
+<div class="feature-section">
+    <div class="swiper-container">
+        <app-swiper-section [title]="'Esquites Tortrix'" [cards]="esquitesTortrixCards" [hoverText]="'Ver más sobre Tortrix'"></app-swiper-section>
+        <!-- <app-swiper-section [title]="'Esquites Diana'" [cards]="esquitesDianaCards" [hoverText]="'Descubre Diana'"></app-swiper-section> -->
+    </div>
+    <div class="content-section">
+        <h1>{{ title }}</h1>
+        <h2>{{ subtitle }}</h2>
+        <p>{{ description }}</p>
+        <app-menu-button menutitle="Menú" width="200px" height="50px" marginLeft="100px"></app-menu-button>
+    </div>
+</div>

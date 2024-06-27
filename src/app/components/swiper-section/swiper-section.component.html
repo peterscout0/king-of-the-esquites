@@ -1,0 +1,16 @@
+<div class="carousel-wrapper">
+  <h2>{{ title }}</h2>
+  <button class="nav-button prev-button" (click)="prev()">&#10094;</button>
+  <div class="carousel-container">
+    <div class="carousel-content" [style.transform]="'translateX(-' + currentIndex * 135 + 'px)'">
+      <div *ngFor="let card of cards" class="carousel-card card">
+        <img [src]="card.imageUrl" [alt]="card.title">
+        <div class="card-overlay">{{ card.hoverText }}</div>
+      </div>
+    </div>
+  </div>
+  <button class="nav-button next-button" (click)="next()">&#10095;</button>
+  <div class="carousel-indicators">
+    <span *ngFor="let card of cards; let i = index" [class.active]="i === currentIndex" (click)="setIndex(i)"></span>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="main-section" [ngStyle]="{'background-color': backgroundColor}">
+    <div class="content">
+      <img [src]="imageUrl" alt="Image" class="center-image">
+      <div class="text-content">
+        <h2>{{ subtitle }}</h2>
+        <h1>{{ title }}</h1>
+        <app-menu-button [menutitle]="buttonTitle"></app-menu-button>
+      </div>
+    </div>
+  </div>

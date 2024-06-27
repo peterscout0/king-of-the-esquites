@@ -2,19 +2,19 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faTiktok } from '@fortawesome/free-brands-svg-icons';
-
+import { SwiperCard } from './models/swiper-card.model';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, FontAwesomeModule],
+  imports: [RouterOutlet, HeaderComponent, HomeComponent, FooterComponent, FontAwesomeModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'king-of-the-esquites';
 
   addresses = [
     { line1: "Carretera Interamericana zona 4", line2: "Jutiapa, Jutiapa" },
@@ -43,5 +43,20 @@ export class AppComponent {
   constructor(library: FaIconLibrary) {
     library.addIcons(faFacebookF, faInstagram, faTwitter, faTiktok);
   }
+
+  // cards Swiper Esquites
+
+  esquitesTortrixCards: SwiperCard[] = [
+    new SwiperCard('/assets/images/logo.png', 'Tortrix Classic', 'Ver más sobre Tortrix Classic'),
+    new SwiperCard('/assets/images/logo.png', 'Tortrix Hot', 'Descubre Tortrix Hot'),
+    new SwiperCard('/assets/images/logo.png', 'Tortrix Hot', 'Descubre Tortrix Hot'),
+    new SwiperCard('/assets/images/logo.png', 'Tortrix Hot', 'Descubre Tortrix Hot'),
+    new SwiperCard('/assets/images/logo.png', 'Tortrix Hot', 'Descubre Tortrix Hot')
+  ];
+
+  esquitesDianaCards: SwiperCard[] = [
+    new SwiperCard('path/to/diana1.jpg', 'Diana Delight', 'Más sobre Diana Delight'),
+    new SwiperCard('path/to/diana2.jpg', 'Diana Sweet', 'Prueba Diana Sweet')
+  ];
 
 }

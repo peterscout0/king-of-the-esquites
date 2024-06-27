@@ -1,1 +1,17 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Asegúrate de que no haya scroll */
+}
 
+app-header, app-footer {
+    flex-shrink: 0; /* No permite que header y footer se reduzcan */
+}
+
+app-home {
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    overflow: hidden; /* Evita desbordamiento interno si no deseas scroll */
+}
