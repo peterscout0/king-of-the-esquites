@@ -4,10 +4,13 @@
     [subtitle]="'Artesanal'"
     [imageUrl]="'/assets/images/logo.png'"
     [buttonTitle]="'Botón'"
-    [backgroundColor]="'rgb(24 45 222 / 82%)'">
+    [backgroundColor]="'rgb(24 45 222 / 82%)'"
+    [imageWidth]="'80%'"
+    [imageHeight]="'auto'"
+  >
   </app-main-section>
 </div>
-  <div class="section-esquites">
+  <div class="section-esquites-tortrix">
     <app-feature-section
     [title]="'Nuestros Sabores'"
     [subtitle]="'¡Fresco y sabroso!'"
@@ -16,7 +19,7 @@
                     Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
                     '"
     [esquitesTortrixCards]="esquitesTortrixCards"
-    [reverseOrder]="true"
+    [reverseOrder]="false"
     >
     </app-feature-section>
   </div>
@@ -26,10 +29,14 @@
       [subtitle]="'Artesanales'"
       [imageUrl]="'/assets/images/logo.png'"
       [buttonTitle]="'Menú'"
-      [backgroundColor]="'rgb(226 17 17 / 79%)'">
+      [backgroundColor]="'rgb(226 17 17 / 79%)'"
+      [buttonMarginLeft]="'-40px'"
+      [imageWidth]="'80%'"
+      [imageHeight]="'auto'"
+      >
     </app-main-section>
   </div>
-  <div class="carousel-section-sauces">
+  <div class="section-esquites-diana">
     <app-feature-section
     [title]="'Nuestros Sabores'"
     [subtitle]="'¡Fresco y sabroso!'"
@@ -42,4 +49,71 @@
     >
     </app-feature-section>
   </div>
-  
+
+  <div class="section-events">
+    <app-main-section
+      [title]="'Eventos'"
+      [subtitle]="'¿Ya pensaste que hacer?'"
+      [imageUrl]="'/assets/images/logo.png'"
+      [buttonTitle]="'Menú'"
+      [backgroundColor]="'rgb(226 17 17 / 79%)'"
+      [buttonMarginLeft]="'140px'"
+      [imageWidth]="'40%'" 
+      [imageHeight]="'auto'"
+    >
+    </app-main-section>
+  </div>
+  <div class="section-images">
+    <app-image-section
+      [images]="[{src: '/assets/images/logo.png', alt: 'Image 1'}, {src: '/assets/images/logo.png', alt: 'Image 2'}, {src: '/assets/images/logo.png', alt: 'Image 2'}, {src: '/assets/images/logo.png', alt: 'Image 2'}, {src: '/assets/images/logo.png', alt: 'Image 2'}]"
+      [imageWidth]="'200px'"
+      [imageHeight]="'200px'"
+      [gap]="'30px'"
+      [backgroundImage]="'/assets/images/logo.png'"
+      [backgroundColor]="'#000'"
+      [title]="'Bebidas'"
+      [paddingBottom]="'100px'"
+      [parallax]="true">
+    </app-image-section>
+  </div>
+  <div class="section-esquites-senorial">
+    <app-feature-section
+    [title]="'Nuestros Sabores'"
+    [subtitle]="'¡Fresco y sabroso!'"
+    [description]="'Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+                    '"
+    [esquitesTortrixCards]="esquitesTortrixCards"
+    [reverseOrder]="false"
+    >
+    </app-feature-section>
+  </div>
+  <div class="section-events">
+    <app-main-section
+      [title]="'Ubicacines'"
+      [subtitle]="'¿Dónde nos puedes encontrar?'"
+      [imageUrl]="'/assets/images/logo.png'"
+      [buttonTitle]="'Ver ubicaciones'"
+      [backgroundColor]="'rgb(226 17 17 / 79%)'"
+      [buttonMarginLeft]="'220px'"
+      [imageWidth]="'40%'" 
+      [imageHeight]="'auto'"
+    >
+    </app-main-section>
+  </div>
+
+  <div class="featured-section">
+    <app-carousel-section
+      [images]="[{src: '/assets/images/logo.png', alt: 'Image 1'}, {src: '/assets/images/esquites.jpg', alt: 'Image 1'}, {src: '/assets/images/logo.png', alt: 'Image 1'}, {src: '/assets/images/esquites.jpg', alt: 'Image 1'}, {src: '/assets/images/logo.png', alt: 'Image 1'}]"
+      [imageWidth]="'90%'"
+      [imageHeight]="'auto'"
+      [backgroundColor]="'rgba(255, 243, 116, 0.8)'"
+      [title]="'Featured Section'"
+      [titleColor]="'#fff'"
+      [titleBackgroundColor]="'rgba(0, 0, 0, 0.5)'"
+      [parallax]="true"
+      [transitionDuration]="5000"
+      [imageFilter]="'brightness(0.8)'">
+    </app-carousel-section>
+  </div>

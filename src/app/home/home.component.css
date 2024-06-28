@@ -1,2 +1,9 @@
+.section-events {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
 
-    
+.button.button {
+    transform: translate(60%, -60%);
+}

@@ -3,14 +3,15 @@ import { FeatureSectionComponent } from '../components/feature-section/feature-s
 import { MainSectionComponent } from '../components/main-section/main-section.component';
 import { MenuButtonComponent } from '../components/buttons/menu-button/menu-button.component';
 import { SwiperCard } from '../models/swiper-card.model';
-
+import { ImageSectionComponent } from '../components/image-section/image-section.component';
+import { CarouselSectionComponent } from '../components/carousel-section/carousel-section.component';
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MenuButtonComponent, FeatureSectionComponent, MainSectionComponent],
+  imports: [MenuButtonComponent, FeatureSectionComponent, MainSectionComponent, ImageSectionComponent, CarouselSectionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
