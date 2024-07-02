@@ -48,11 +48,11 @@ export class AppComponent {
   // cards Swiper Esquites
 
   esquitesTortrixCards: SwiperCard[] = [
-    new SwiperCard('/assets/images/esquites/original-esquite2.png', 'Tortrix Classic', 'Ver más sobre Tortrix Classic'),
-    new SwiperCard('/assets/images/esquites/original-esquite.png', 'Tortrix Hot', 'Descubre Tortrix Hot'),
-    new SwiperCard('/assets/images/logo.png', 'Tortrix Hot', 'Descubre Tortrix Hot'),
-    new SwiperCard('/assets/images/logo.png', 'Tortrix Hot', 'Descubre Tortrix Hot'),
-    new SwiperCard('/assets/images/logo.png', 'Tortrix Hot', 'Descubre Tortrix Hot')
+    new SwiperCard('/assets/images/esquites/tortrix/tortrix-detodito2.png', 'Tortrix Classic', 'Patoj@ Chilero'),
+    new SwiperCard('/assets/images/esquites/tortrix/tortrix-barbacoa.png', 'Tortrix Hot', 'Qué calidá'),
+    new SwiperCard('/assets/images/esquites/tortrix/tortrix-detodito3.png', 'Tortrix Hot', 'Chilero esto va'),
+    new SwiperCard('/assets/images/esquites/tortrix/tortrix-jala-chapi.png', 'Tortrix Hot', 'Ahísta ve'),
+    new SwiperCard('/assets/images/esquites/tortrix/tortrix-barbacoa.png', 'Tortrix Hot', 'Ponete las pilas')
   ];
 
   esquitesDianaCards: SwiperCard[] = [

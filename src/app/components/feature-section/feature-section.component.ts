@@ -16,6 +16,7 @@ export class FeatureSectionComponent {
   @Input() title!: string;
   @Input() subtitle!: string;
   @Input() description!: string;
+  @Input() buttonTitle: string = 'Menú';
   @Input() reverseOrder: boolean = false;
   @Input() titleColor: string = '#000';
   @Input() subtitleColor: string = '#000';

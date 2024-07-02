@@ -27,6 +27,6 @@
         <h1 class="fw-bold" [ngStyle]="{'color': titleColor}">{{ title }}</h1>
         <h2 class="fw-bolder" [ngStyle]="{'color': subtitleColor}">{{ subtitle }}</h2>
         <p class="mb-3" [ngStyle]="{'color': descriptionColor}">{{ description }}</p>
-        <app-menu-button menutitle="Menú" width="220px" height="70px" marginLeft="125px" lineWidth="75px" [ngClass]="{'reverse-button': reverseOrder}"></app-menu-button>
+        <app-menu-button [menutitle]="buttonTitle" width="220px" height="70px" marginLeft="125px" lineWidth="75px" [ngClass]="{'reverse-button': reverseOrder}"></app-menu-button>
     </div>
 </div>

@@ -18,4 +18,24 @@ export class MainSectionComponent {
   @Input() buttonMarginLeft: string = '';
   @Input() imageWidth: string = '80%';
   @Input() imageHeight: string = 'auto';
+  @Input() useBackgroundImage: boolean = false;
+  @Input() backgroundImageUrl: string = '';
+  @Input() parallax: boolean = false;
+  @Input() imageFilter: string = '';
+
+  get backgroundStyle() {
+    return {
+      '--background-color': this.backgroundColor,
+      '--background-image': this.useBackgroundImage ? `url(${this.backgroundImageUrl})` : 'none',
+      '--background-attachment': this.parallax ? 'fixed' : 'scroll',
+      '--background-filter': this.imageFilter,
+    };
+  }
+
+  get imageStyle() {
+    return {
+      'width': this.imageWidth,
+      'height': this.imageHeight,
+    };
+  }
 }

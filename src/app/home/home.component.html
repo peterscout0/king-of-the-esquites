@@ -5,19 +5,19 @@
     [imageUrl]="'/assets/images/esquites/original-esquite.png'"
     [buttonTitle]="'Ir al catálogo'"
     [backgroundColor]="'rgb(194, 8, 8)'"
-    [imageWidth]="'60%'"
+    [imageWidth]="'80%'"
     [imageHeight]="'auto'"
   >
   </app-main-section>
 </div>
   <div class="section-esquites-tortrix">
     <app-feature-section
-    [title]="'Nuestros Sabores'"
-    [subtitle]="'¡Fresco y sabroso!'"
-    [description]="'Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
-                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
-                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+    [title]="'¡Ya los probaste!'"
+    [subtitle]="'Esquiteate a lo chapín'"
+    [description]="'Usamos productos 100% nacionales para la elaboración de nuestros esquites.
+                    Apoyando a la economía local.
                     '"
+    [buttonTitle]="'Tortrix'"
     [reverseOrder]="false"
     [titleColor]="'#fff'"
     [subtitleColor]="'#fff'"
@@ -60,11 +60,10 @@
   </div>
   <div class="section-esquites-diana">
     <app-feature-section
-    [title]="'Nuestros Sabores'"
-    [subtitle]="'¡Fresco y sabroso!'"
-    [description]="'Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
-                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
-                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+    [title]="'Ven y disfruta'"
+    [subtitle]="'¡Frescos y sabrosos!'"
+    [description]="'Ahora puedes disfrutar de tus productos favoritos de Diana.
+                    
                     '"
     [esquitesDianaCards]="esquitesDianaCards"
     [reverseOrder]="true"
@@ -85,11 +84,15 @@
     <app-main-section
       [title]="'Eventos'"
       [subtitle]="'¿Es un día especial?'"
-      [imageUrl]="'/assets/images/events/events.jpg'"
-      [buttonTitle]="'Menú'"
+      [imageUrl]="''"
+      [buttonTitle]="'Eventos'"
       [backgroundColor]="'#ae8149'"
+      [useBackgroundImage]="true"
+      backgroundImageUrl="/assets/images/backgrounds/bg-food-truck.png"
       [imageWidth]="'40%'" 
       [imageHeight]="'auto'"
+      [parallax]="true"
+      imageFilter="blur(2px)"
     >
     </app-main-section>
   </div>
