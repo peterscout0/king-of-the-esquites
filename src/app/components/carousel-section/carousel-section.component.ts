@@ -39,7 +39,6 @@ export class CarouselSectionComponent implements OnInit {
     return {
       '--background-color': this.backgroundColor,
       '--background-image': this.showBackgroundImage ? `url(${this.backgroundImage})` : 'none',
-      'filter': this.imageFilter,
       ...(this.parallax && { 'background-attachment': 'fixed' }),
     };
   }
