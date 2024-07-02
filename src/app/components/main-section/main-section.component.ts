@@ -22,6 +22,10 @@ export class MainSectionComponent {
   @Input() backgroundImageUrl: string = '';
   @Input() parallax: boolean = false;
   @Input() imageFilter: string = '';
+  @Input() titleColor: string = '#fff';
+  @Input() subtitleColor: string = '#fff';
+  @Input() titleTextShadow: string = 'none';
+  @Input() subtitleTextShadow: string = 'none';
 
   get backgroundStyle() {
     return {
@@ -36,6 +40,20 @@ export class MainSectionComponent {
     return {
       'width': this.imageWidth,
       'height': this.imageHeight,
+    };
+  }
+
+  get titleStyle() {
+    return {
+      'color': this.titleColor,
+      'text-shadow': this.titleTextShadow, 
+    };
+  }
+
+  get subtitleStyle() {
+    return {
+      'color': this.subtitleColor,
+      'text-shadow': this.subtitleTextShadow,
     };
   }
 }

@@ -2,15 +2,16 @@
     display: flex;
     align-items: center;
     background: #0c0c0cde;
-    color: white;
-    border: 3px solid #ffd989;
+    color: rgba(232, 211, 121, 0.86);
+    /* border: 3px solid #ffd989; */
+    border: 3px solid #550505f0;
     transform: translate(15%, -60%);
     border-radius: 8px;
     letter-spacing: 0.3em;
     padding-left: 40px;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 3px 10px rgb(136 11 11 / 66%);
     transition: background-color 0.3s, color 0.3s;
     width: var(--button-width, 331px);
     height: var(--button-height, 84px);
@@ -19,7 +20,7 @@
 .button div {
     width:  var(--button-line-width, 75px);
     height: 2px;
-    background: red;
+    background: rgb(180, 8, 8);
     margin-left: var(--button-margin-left, 230px);
     position: absolute;
     transition: margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,8 +42,8 @@
 
 .button:active {
     background-color: #ffd989;
-    border: 3px solid red;
-    color: red;
+    border: 3px solid rgb(177, 18, 18);
+    color: rgb(205, 22, 22);
 }
 
 @keyframes letterroll {

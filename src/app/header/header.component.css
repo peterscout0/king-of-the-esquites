@@ -41,8 +41,10 @@
 
 .menu-container .nav-link:hover,
 .menu-container .dropdown-item:hover {
-    color: #f8ec78;
-    text-shadow: 0 0 8px #f8ec78;
+    /* color: #f8ec78;
+    text-shadow: 0 0 8px #f8ec78; */
+    color: #fff;
+    text-shadow: 0 0 8px yellow
 }
 
 .menu-container .dropdown-item {

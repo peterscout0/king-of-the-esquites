@@ -5,13 +5,14 @@ import { MenuButtonComponent } from '../components/buttons/menu-button/menu-butt
 import { SwiperCard } from '../models/swiper-card.model';
 import { ImageSectionComponent } from '../components/image-section/image-section.component';
 import { CarouselSectionComponent } from '../components/carousel-section/carousel-section.component';
+import { SeparatorSectionComponent } from '../components/separator-section/separator-section.component';
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MenuButtonComponent, FeatureSectionComponent, MainSectionComponent, ImageSectionComponent, CarouselSectionComponent],
+  imports: [MenuButtonComponent, FeatureSectionComponent, MainSectionComponent, ImageSectionComponent, CarouselSectionComponent, SeparatorSectionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
 
   @Input() esquitesTortrixCards: SwiperCard[] = [];
   @Input() esquitesDianaCards: SwiperCard[] = [];
+  @Input() esquitesOriginalCards: SwiperCard[] = [];
 
   constructor() {}
 

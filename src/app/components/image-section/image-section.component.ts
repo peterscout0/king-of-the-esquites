@@ -17,6 +17,7 @@ export class ImageSectionComponent {
   @Input() backgroundColor: string = '#fff';
   @Input() title: string = '';
   @Input() titleColor: string = '#fff';
+  @Input() titleShadow: string = '';
   @Input() footerBackgroundColor: string = '#fff';
   @Input() paddingBottom: string = '50px';
   @Input() parallax: boolean = false;
@@ -45,6 +46,13 @@ export class ImageSectionComponent {
     return {
       'width': this.imageWidth,
       'height': this.imageHeight,
+    };
+  }
+
+  get titleStyle() {
+    return {
+      'color': this.titleColor,
+      'text-shadow': this.titleShadow,
     };
   }
 }

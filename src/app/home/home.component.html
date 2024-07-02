@@ -7,9 +7,65 @@
     [backgroundColor]="'rgb(194, 8, 8)'"
     [imageWidth]="'80%'"
     [imageHeight]="'auto'"
+    [titleColor]="'#550505f0'"
+    [subtitleColor]="'#550505f0'"
+    [titleTextShadow]="'rgb(96, 12, 12) -3px 2px 0px'"
+    [subtitleTextShadow]="'rgb(116, 13, 13) -2px 2px 0px'"
   >
   </app-main-section>
 </div>
+<div class="section-esquites-original">
+  <app-feature-section
+  [title]="'Esquites Originales'"
+  [subtitle]="'¡Frescos y sabrosos!'"
+  [description]="'Disfruta de la tradición y el sabor auténtico con nuestros esquites originales. 
+                  Preparados con los mejores ingredientes 
+                  para ofrecerte una experiencia inolvidable en cada bocado.
+                  '"
+  [reverseOrder]="false"
+  
+  [titleColor]="'rgb(194, 8, 8)'"
+  [subtitleColor]="'rgb(27 25 25 / 82%)'"
+  [descriptionColor]="'rgb(194, 8, 8)'"
+  [featureBackgroundColor]="'red'"
+  [featureBackgroundImage]="'/assets/images/backgrounds/bg-old-west.jpg'"
+  [useBackgroundImage]="true"
+  [swiperBackgroundColor]="'rgb(36 36 36 / 96%)'"
+  [contentBackgroundColor]="'rgba(232, 211, 121, 0.86)'"
+  [esquitesOriginalCards]="esquitesOriginalCards"
+  >
+  </app-feature-section>
+</div>
+  <div class="section-sauces">
+    <app-main-section
+      [title]="'Salsas'"
+      [subtitle]="'¡Prueba nuestras!'"
+      [imageUrl]="'/assets/images/sauces/chipotle.png'"
+      [buttonTitle]="'Salsas'"
+      [backgroundColor]="'rgb(232 211 121)'"
+      [imageWidth]="'80%'"
+      [imageHeight]="'auto'"
+      [titleColor]="'#6d0707f0'"
+      [subtitleColor]="'#6d0707f0'"
+      >
+    </app-main-section>
+  </div>
+  <div class="section-images-sauces">
+    <app-image-section
+      [images]="[{src: '/assets/images/sauces/chipotle.png', alt: 'Image 1'}, {src: '/assets/images/sauces/salsa-queso.png', alt: 'Image 2'}, {src: '/assets/images/sauces/salsa-ranch.png', alt: 'Image 2'}, {src: '/assets/images/sauces/salsa-verde.png', alt: 'Image 2'}, {src: '/assets/images/sauces/chipotle.png', alt: 'Image 2'}]"
+      [backgroundImage]="'/assets/images/backgrounds/bg-table.jpg'"
+      [backgroundColor]="'#000'"
+      [title]="'Salsas'"
+      [titleColor]="'#fff'"
+      [titleShadow]="'#ff0303 0px 0px 8px'"
+      [footerBackgroundColor]="'rgb(222 192 192 / 34%)'"
+      [paddingBottom]="'100px'"
+      [parallax]="true"
+      [applyFilter]="false"
+      [filterValue]="'blur(2px)'"
+      >
+    </app-image-section>
+  </div>
   <div class="section-esquites-tortrix">
     <app-feature-section
     [title]="'¡Ya los probaste!'"
@@ -22,80 +78,28 @@
     [titleColor]="'#fff'"
     [subtitleColor]="'#fff'"
     [descriptionColor]="'#fff'"
-    [featureBackgroundColor]="'rgb(232, 211, 121)'"
+    [titleTextShadow]="'rgb(0, 0, 0) -5px 5px 0px'"
+    [subtitleTextShadow]="'rgb(51, 51, 51) -2px 4px 0px'"
+    [descriptionTextShadow]="'rgb(34, 34, 34) 1px 2px 2px'"
+    [featureBackgroundColor]="'rgb(255,119,8)'"
     [featureBackgroundImage]="'/assets/images/backgrounds/bg-wood.jpeg'"
-    [useBackgroundImage]="true"
-    [swiperBackgroundColor]="'#242424fa'"
-    [contentBackgroundColor]="'rgb(232 211 121 / 86%)'"
+    [useBackgroundImage]="false"
+    [useGradient]="true"
+    [gradientBackground]="'linear-gradient(355deg, rgba(255,119,8,1) 0%, rgba(253,195,8,1) 84%)'"
+    [swiperBackgroundColor]="'#587641'"
+    [contentBackgroundColor]="'rgb(255, 40, 41)'"
     [esquitesTortrixCards]="esquitesTortrixCards"
     >
     </app-feature-section>
   </div>
-  <div class="section-sauces">
-    <app-main-section
-      [title]="'Salsas'"
-      [subtitle]="'¡Prueba nuestras!'"
-      [imageUrl]="'/assets/images/sauces/chipotle.png'"
-      [buttonTitle]="'Salsas'"
-      [backgroundColor]="'rgb(232 211 121)'"
-      [imageWidth]="'80%'"
-      [imageHeight]="'auto'"
-      >
-    </app-main-section>
-  </div>
-  <div class="section-images-sauces">
-    <app-image-section
-      [images]="[{src: '/assets/images/sauces/chipotle.png', alt: 'Image 1'}, {src: '/assets/images/sauces/salsa-queso.png', alt: 'Image 2'}, {src: '/assets/images/sauces/salsa-ranch.png', alt: 'Image 2'}, {src: '/assets/images/sauces/salsa-verde.png', alt: 'Image 2'}, {src: '/assets/images/sauces/chipotle.png', alt: 'Image 2'}]"
-      [backgroundImage]="'/assets/images/backgrounds/bg-table.jpg'"
-      [backgroundColor]="'#000'"
-      [title]="'Salsas'"
-      [titleColor]="'#fff'"
-      [footerBackgroundColor]="'rgb(222 192 192 / 34%)'"
-      [paddingBottom]="'100px'"
-      [parallax]="true"
-      [applyFilter]="false"
-      [filterValue]="'blur(2px)'"
-      >
-    </app-image-section>
-  </div>
-  <div class="section-esquites-diana">
-    <app-feature-section
-    [title]="'Ven y disfruta'"
-    [subtitle]="'¡Frescos y sabrosos!'"
-    [description]="'Ahora puedes disfrutar de tus productos favoritos de Diana.
-                    
-                    '"
-    [esquitesDianaCards]="esquitesDianaCards"
-    [reverseOrder]="true"
-
-    [titleColor]="'#fff'"
-    [subtitleColor]="'#fff'"
-    [descriptionColor]="'#fff'"
-    [featureBackgroundColor]="'red'"
-    [featureBackgroundImage]="'/assets/images/backgrounds/bg-wood.jpeg'"
+  <app-separator-section
+    [height]="'150px'"
+    [backgroundColor]="'#f5f5f5'"
+    [backgroundImageUrl]= "'/assets/images/backgrounds/bg-old-west.png'"
     [useBackgroundImage]="true"
-    [swiperBackgroundColor]="'#242424fa'"
-    [contentBackgroundColor]="'#ef9e09'"
+    [parallax]="true"
     >
-    </app-feature-section>
-  </div>
-
-  <div class="section-events">
-    <app-main-section
-      [title]="'Eventos'"
-      [subtitle]="'¿Es un día especial?'"
-      [imageUrl]="''"
-      [buttonTitle]="'Eventos'"
-      [backgroundColor]="'#ae8149'"
-      [useBackgroundImage]="true"
-      backgroundImageUrl="/assets/images/backgrounds/bg-food-truck.png"
-      [imageWidth]="'40%'" 
-      [imageHeight]="'auto'"
-      [parallax]="true"
-      imageFilter="blur(2px)"
-    >
-    </app-main-section>
-  </div>
+  </app-separator-section>
   <div class="section-images">
     <app-image-section
       [images]="[{src: '/assets/images/drinks/michelada.png', alt: 'Image 1'}, {src: '/assets/images/drinks/nuclear0.png', alt: 'Image 2'}, {src: '/assets/images/drinks/lemon.png', alt: 'Image 2'}, {src: '/assets/images/drinks/tropical.png', alt: 'Image 2'}, {src: '/assets/images/drinks/plutonio.png', alt: 'Image 2'}]"
@@ -103,6 +107,7 @@
       [backgroundColor]="'#000'"
       [title]="'Bebidas'"
       [titleColor]="'#fff'"
+      [titleShadow]="'rgb(11 120 255) 0px 0px 8px'"
       [footerBackgroundColor]="'rgb(37 35 34 / 26%)'"
       [paddingBottom]="'100px'"
       [parallax]="true"
@@ -111,36 +116,52 @@
       >
     </app-image-section>
   </div>
-  <div class="section-esquites-senorial">
+  <div class="section-esquites-diana">
     <app-feature-section
-    [title]="'Nuestros Sabores'"
-    [subtitle]="'¡Fresco y sabroso!'"
-    [description]="'Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
-                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
-                    Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
+    [title]="'DIANA'"
+    [subtitle]="'¡TOZTECAS Y MÁS!'"
+    [description]="'Disfruta de la combinación perfecta de sabores con nuestros esquites hechos con los productos tradicionales de DIANA y los nuevos TOZTECAS.
+                    
                     '"
-    [esquitesTortrixCards]="esquitesTortrixCards"
-    [reverseOrder]="false"
+    [esquitesDianaCards]="esquitesDianaCards"
+    [reverseOrder]="true"
+
+    [titleColor]="'#faed11'"
+    [subtitleColor]="'#faed11'"
+    [descriptionColor]="'#faed11'"
+    [featureBackgroundColor]="'#ffc20b'"
+    [featureBackgroundImage]="'/assets/images/backgrounds/bg-wood.jpeg'"
+    [useBackgroundImage]="false"
+    [swiperBackgroundColor]="'#faed11'"
+    [contentBackgroundColor]="'#c4192f'"
     >
     </app-feature-section>
   </div>
   <div class="section-events">
     <app-main-section
-      [title]="'Ubicaciones'"
-      [subtitle]="''"
-      [imageUrl]="'/assets/images/backgrounds/logo-maps.png'"
-      [buttonTitle]="'Ubicaciones'"
-      [backgroundColor]="'#000'"
-      [imageWidth]="'40%'"
+      [title]="'Eventos'"
+      [subtitle]="'¿Es un día especial?'"
+      [imageUrl]="''"
+      [buttonTitle]="'Eventos'"
+      [backgroundColor]="'rgb(232 211 121 / 88%)'"
+      [useBackgroundImage]="true"
+      backgroundImageUrl="/assets/images/backgrounds/bg-food-truck.png"
+      [imageWidth]="'40%'" 
       [imageHeight]="'auto'"
+      [titleColor]="'rgb(232 211 121 / 88%)'"
+      [subtitleColor]="'rgb(232 211 121 / 88%)'"
+      [titleTextShadow]="'rgb(116 13 13) -4px 4px 0px'"
+      [subtitleTextShadow]="'rgb(116 13 13) -4px 4px 0px'"
+      [parallax]="true"
+      imageFilter="blur(2px)"
+
     >
     </app-main-section>
   </div>
-  
-
+  <div class="section-esquites-senorial"></div>
   <div class="featured-section">
     <app-carousel-section
-      [images]="[{src: '/assets/images/clients-section/farruko.jpg', alt: 'Image 1'}, {src: '/assets/images/esquites.jpg', alt: 'Image 1'}, {src: '/assets/images/clients-section/farruko.jpg', alt: 'Image 1'}, {src: '/assets/images/esquites.jpg', alt: 'Image 1'}, {src: '/assets/images/clients-section/farruko.jpg', alt: 'Image 1'}]"
+      [images]="[{src: '/assets/images/clients-section/farruko.jpg', alt: 'Image 1'}, {src: '/assets/images/clients-section/toledo.jpeg', alt: 'Image 1'}, {src: '/assets/images/clients-section/kathy.jpeg', alt: 'Image 1'}, {src: '/assets/images/clients-section/farruko.jpg', alt: 'Image 1'}, {src: '/assets/images/clients-section/kathy.jpeg', alt: 'Image 1'}]"
       [imageWidth]="'90%'"
       [imageHeight]="'auto'"
       [backgroundColor]="'rgba(0, 0, 0, 0.5)'"
@@ -148,9 +169,11 @@
       [showBackgroundImage]="true"
       [title]="'Clientes del mes'"
       [titleColor]="'#fff'"
+      [titleTextShadow]="'0 0 8px yellow'"
       [titleBackgroundColor]="'rgba(0, 0, 0, 0.5)'"
       [parallax]="true"
       [transitionDuration]="5000"
-      [imageFilter]="'brightness(0.8)'">
+      [imageFilter]="'brightness(0.8)'"
+    >
     </app-carousel-section>
   </div>

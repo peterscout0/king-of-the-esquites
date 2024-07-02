@@ -3,8 +3,8 @@
   <div class="content">
     <img [src]="imageUrl" alt="" class="center-image" [ngStyle]="imageStyle">
     <div class="text-content">
-      <h2 class="fw-bolder">{{ subtitle }}</h2>
-      <h1 class="fw-bold">{{ title }}</h1>
+      <h2 class="fw-bolder" [ngStyle]="subtitleStyle">{{ subtitle }}</h2>
+      <h1 class="fw-bold" [ngStyle]="titleStyle">{{ title }}</h1>
       <div class="mt-5 button-container" [ngStyle]="{'margin-left': buttonMarginLeft}">
         <app-menu-button [menutitle]="buttonTitle"></app-menu-button>
       </div>

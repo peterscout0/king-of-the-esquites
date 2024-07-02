@@ -35,6 +35,7 @@
   font-size: 2em;
   background-color: var(--title-background-color, rgba(0, 0, 0, 0.5));
   color: var(--title-color, #fff);
+  text-shadow: var(--title-text-shadow, none);
 }
 
 @media (max-width: 768px) {

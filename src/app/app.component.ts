@@ -47,6 +47,14 @@ export class AppComponent {
 
   // cards Swiper Esquites
 
+  esquitesOriginalCards: SwiperCard[] = [
+    new SwiperCard('/assets/images/esquites/original-esquite.png', '', 'El Chiquito'),
+    new SwiperCard('/assets/images/esquites/original-esquite2.png', '', 'El Mamado'),
+    new SwiperCard('/assets/images/esquites/lotinacho.png', '', 'LoTinacho'),
+    new SwiperCard('/assets/images/esquites/original-no-picante.png', '', 'El sin Chile'),
+    new SwiperCard('/assets/images/esquites/colocha.png', '', 'La Colocha'),
+  ];
+
   esquitesTortrixCards: SwiperCard[] = [
     new SwiperCard('/assets/images/esquites/tortrix/tortrix-detodito2.png', 'Tortrix Classic', 'Patoj@ Chilero'),
     new SwiperCard('/assets/images/esquites/tortrix/tortrix-barbacoa.png', 'Tortrix Hot', 'Qué calidá'),
@@ -56,8 +64,11 @@ export class AppComponent {
   ];
 
   esquitesDianaCards: SwiperCard[] = [
-    new SwiperCard('path/to/diana1.jpg', 'Diana Delight', 'Más sobre Diana Delight'),
-    new SwiperCard('path/to/diana2.jpg', 'Diana Sweet', 'Prueba Diana Sweet')
+    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
+    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
+    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
+    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
+    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
   ];
 
 }

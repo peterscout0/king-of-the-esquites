@@ -16,6 +16,7 @@ export class SwiperSectionComponent {
   @Input() hoverText: string = 'Ver completo';
 
   @Input() titleColor: string = '#fff';
+  @Input() titleTextShadow: string = 'none';
   @Input() navButtonColor: string = '#c20808';
   @Input() cardBackgroundColor: string = '#333333c5';
   @Input() indicatorBackgroundColor: string = '#ccc';
@@ -37,6 +38,13 @@ export class SwiperSectionComponent {
 
   setIndex(index: number) {
     this.currentIndex = index;
+  }
+
+  get titleStyle() {
+    return {
+      'color': this.titleColor,
+      'text-shadow': this.titleTextShadow,
+    };
   }
 }
 

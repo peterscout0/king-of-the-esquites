@@ -129,7 +129,7 @@
   }
   
   .title-carousel {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
   
   .carousel-container {
@@ -146,6 +146,10 @@
     width: 110px;
     height: 110px;
   }
+
+  .card-overlay {
+    font-size: 0.9em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -154,7 +158,7 @@
   }
   
   .title-carousel {
-    font-size: 1.2em;
+    font-size: 2.0em;
   }
   
   .carousel-container {
@@ -178,6 +182,10 @@
 
   .carousel-indicators {
     margin-bottom: 0em;
+  }
+
+  .card-overlay {
+    font-size: 0.8em;
   }
 }
 
@@ -211,5 +219,9 @@
 
   .carousel-indicators {
     margin-bottom: 0em;
+  }
+
+  .card-overlay {
+    font-size: 0.7em;
   }
 }

@@ -18,6 +18,7 @@ export class CarouselSectionComponent implements OnInit {
   @Input() title: string = '';
   @Input() titleColor: string = '#fff';
   @Input() titleBackgroundColor: string = 'rgba(0, 0, 0, 0.5)';
+  @Input() titleTextShadow: string = '2px 2px 4px #000';
   @Input() parallax: boolean = false;
   @Input() transitionDuration: number = 5000;
   @Input() imageFilter: string = '';
@@ -55,6 +56,7 @@ export class CarouselSectionComponent implements OnInit {
     return {
       'color': this.titleColor,
       'background-color': this.titleBackgroundColor,
+      'text-shadow': this.titleTextShadow,
     };
   }
 }

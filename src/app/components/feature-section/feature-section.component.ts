@@ -21,13 +21,52 @@ export class FeatureSectionComponent {
   @Input() titleColor: string = '#000';
   @Input() subtitleColor: string = '#000';
   @Input() descriptionColor: string = '#000';
+  @Input() titleTextShadow: string = 'none';
+  @Input() subtitleTextShadow: string = 'none';
+  @Input() descriptionTextShadow: string = 'none';
   @Input() featureBackgroundColor: string = '#e8d379';
   @Input() featureBackgroundImage: string = '';
   @Input() useBackgroundImage: boolean = false;
+  @Input() useGradient: boolean = false;
+  @Input() gradientBackground: string = '';
   @Input() swiperBackgroundColor: string = '#242424fa';
   @Input() contentBackgroundColor: string = '#fff';
 
   // cards del carousel esquites y salsas
   @Input() esquitesDianaCards: SwiperCard[] = [];
   @Input() esquitesTortrixCards: SwiperCard[] = [];
+  @Input() esquitesOriginalCards: SwiperCard[] = [];
+
+  get backgroundStyle() {
+    if (this.useGradient) {
+      return { 'background-image': this.gradientBackground };
+    }
+    return {
+      'background-color': this.featureBackgroundColor,
+      'background-image': this.useBackgroundImage ? `url(${this.featureBackgroundImage})` : 'none',
+      'background-size': this.useBackgroundImage ? 'cover' : 'initial',
+      'background-position': this.useBackgroundImage ? 'center' : 'initial',
+    };
+  }
+
+  get titleStyle() {
+    return {
+      'color': this.titleColor,
+      'text-shadow': this.titleTextShadow,
+    };
+  }
+
+  get subtitleStyle() {
+    return {
+      'color': this.subtitleColor,
+      'text-shadow': this.subtitleTextShadow,
+    };
+  }
+
+  get descriptionStyle() {
+    return {
+      'color': this.descriptionColor,
+      'text-shadow': this.descriptionTextShadow,
+    };
+  }
 }
