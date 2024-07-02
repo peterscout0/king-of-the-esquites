@@ -81,6 +81,7 @@
 .king-title {
     animation: text-anim 0.1s infinite;
     text-shadow: 0 0 5px #ffc936, 0 0 10px #ffc936, 0 0 20px #ffc936, 0 0 40px #ffc936;
+    /* font-family: 'Rye', sans-serif; */
 }
 
 @keyframes text-anim {

@@ -16,7 +16,7 @@
 }
 
 .menu-container {
-    flex: 0 0 55%;
+    flex: 0 0 60%;
     display: flex;
     align-items: center;
 }
@@ -67,10 +67,6 @@
     min-height: 50px;
     max-height: 80px;
     cursor: pointer;
-}
-
-.menu-container {
-    flex: 0 0 55%;
 }
 
 .logo-container {
