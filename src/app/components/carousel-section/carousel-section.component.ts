@@ -10,14 +10,16 @@ import { CommonModule } from '@angular/common';
 })
 export class CarouselSectionComponent implements OnInit {
   @Input() images: { src: string, alt: string }[] = [];
-  @Input() imageWidth: string = '85%'; // Ajustado para ver el fondo
+  @Input() imageWidth: string = '85%';
   @Input() imageHeight: string = 'auto';
   @Input() backgroundColor: string = '#000';
+  @Input() backgroundImage: string = '';
+  @Input() showBackgroundImage: boolean = false;
   @Input() title: string = '';
   @Input() titleColor: string = '#fff';
   @Input() titleBackgroundColor: string = 'rgba(0, 0, 0, 0.5)';
   @Input() parallax: boolean = false;
-  @Input() transitionDuration: number = 5000; // en milisegundos
+  @Input() transitionDuration: number = 5000;
   @Input() imageFilter: string = '';
 
   currentIndex: number = 0;
@@ -35,6 +37,7 @@ export class CarouselSectionComponent implements OnInit {
   get backgroundStyle() {
     return {
       '--background-color': this.backgroundColor,
+      '--background-image': this.showBackgroundImage ? `url(${this.backgroundImage})` : 'none',
       'filter': this.imageFilter,
       ...(this.parallax && { 'background-attachment': 'fixed' }),
     };

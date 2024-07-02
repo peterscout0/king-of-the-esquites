@@ -17,6 +17,16 @@ export class FeatureSectionComponent {
   @Input() subtitle!: string;
   @Input() description!: string;
   @Input() reverseOrder: boolean = false;
+  @Input() titleColor: string = '#000';
+  @Input() subtitleColor: string = '#000';
+  @Input() descriptionColor: string = '#000';
+  @Input() featureBackgroundColor: string = '#e8d379';
+  @Input() featureBackgroundImage: string = '';
+  @Input() useBackgroundImage: boolean = false;
+  @Input() swiperBackgroundColor: string = '#242424fa';
+  @Input() contentBackgroundColor: string = '#fff';
+
+  // cards del carousel esquites y salsas
   @Input() esquitesDianaCards: SwiperCard[] = [];
   @Input() esquitesTortrixCards: SwiperCard[] = [];
 }

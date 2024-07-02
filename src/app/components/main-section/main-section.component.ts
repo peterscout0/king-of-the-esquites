@@ -15,7 +15,7 @@ export class MainSectionComponent {
   @Input() imageUrl: string = '/assets/images/logo.png';
   @Input() buttonTitle: string = 'Botón';
   @Input() backgroundColor: string = 'rgba(8, 255, 239, 0.911)';
-  @Input() buttonMarginLeft: string = '0px';
+  @Input() buttonMarginLeft: string = '';
   @Input() imageWidth: string = '80%';
   @Input() imageHeight: string = 'auto';
 }

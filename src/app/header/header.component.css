@@ -1,10 +1,16 @@
 .header {
-    font-family: 'Cursive', sans-serif;
+    /* font-family: 'Cursive', sans-serif; */
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #222;
+    color: #f8ec78;
+    border-bottom: 5px solid #ffc936;
+    position: relative;
+    z-index: 1000;
 }
+
 .menu-container {
     flex: 0 0 55%;
     display: flex;
@@ -16,15 +22,32 @@
 }
 
 .menu-container .dropdown-menu {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #222;
+    border: none;
+    box-shadow: none;
 }
 
 .menu-container .nav-link {
-    color: black;
+    color: #fff;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.menu-container .nav-link:hover,
+.menu-container .dropdown-item:hover {
+    color: #f8ec78;
+    text-shadow: 0 0 8px #f8ec78;
+}
+
+.menu-container .dropdown-item {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.menu-container .dropdown-item:hover {
+    background-color: transparent;
 }
 
 .logo-container, .logo-placeholder {
@@ -52,4 +75,52 @@
 
 .right-space {
     flex: 0 0 30%;
+}
+
+.navbar-toggler.esquite-icon {
+    border: 2px solid #fff;
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-toggler.esquite-icon img {
+    width: 30px;
+    height: 30px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-toggler.esquite-icon:hover,
+.navbar-toggler.esquite-icon:focus,
+.navbar-toggler.collapsed + .navbar-collapse.show ~ .navbar-toggler.esquite-icon {
+    color: #f8ec78;
+    border-color: #f8ec78;
+    box-shadow: 0 0 4px #f8ec78;
+}
+
+.navbar-toggler.esquite-icon:hover img,
+.navbar-toggler.esquite-icon:focus img,
+.navbar-toggler.collapsed + .navbar-collapse.show ~ .navbar-toggler.esquite-icon img {
+    filter: invert(70%) sepia(100%) saturate(1000%) hue-rotate(30deg) brightness(100%) contrast(100%); /* Amarillo pálido con sombra */
+}
+
+.navbar-toggler.esquite-icon.rotated img {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 991.98px) {
+    .menu-container .dropdown-menu {
+        position: static;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: -17px;
+        width: 200px;
+        z-index: 1001;
+        background-color: #222;
+        padding: 5px;
+        border-radius: 8px;
+        border: 2px groove #f8ec78;
+    }
 }

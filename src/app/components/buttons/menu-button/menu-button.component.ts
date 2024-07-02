@@ -12,5 +12,6 @@ export class MenuButtonComponent {
   @Input() width: string = '331px';
   @Input() height: string = '84px';
   @Input() marginLeft: string = '230px';
+  @Input() lineWidth: string = '75px';
 }
 

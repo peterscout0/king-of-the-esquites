@@ -2,9 +2,9 @@
     <div class="content">
       <img [src]="imageUrl" alt="Image" class="center-image" [ngStyle]="{'width': imageWidth, 'height': imageHeight}">
       <div class="text-content">
-        <h2>{{ subtitle }}</h2>
-        <h1>{{ title }}</h1>
-        <div class="button-container" [ngStyle]="{'margin-left': buttonMarginLeft}">
+        <h2 class="fw-bolder">{{ subtitle }}</h2>
+        <h1 class="fw-bold">{{ title }}</h1>
+        <div class="mt-5 button-container" [ngStyle]="{'margin-left': buttonMarginLeft}">
             <app-menu-button [menutitle]="buttonTitle"></app-menu-button>
         </div>
       </div>

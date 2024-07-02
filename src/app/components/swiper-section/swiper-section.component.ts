@@ -15,6 +15,12 @@ export class SwiperSectionComponent {
   @Input() cards: SwiperCard[] = [];
   @Input() hoverText: string = 'Ver completo';
 
+  @Input() titleColor: string = '#fff';
+  @Input() navButtonColor: string = '#c20808';
+  @Input() cardBackgroundColor: string = '#333333c5';
+  @Input() indicatorBackgroundColor: string = '#ccc';
+  @Input() activeIndicatorBorderColor: string = '#e8d379';
+
   currentIndex: number = 0;
 
   next() {

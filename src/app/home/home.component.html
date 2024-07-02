@@ -1,11 +1,11 @@
 <div class="section-main">
   <app-main-section
-    [title]="'HELADO'"
-    [subtitle]="'Artesanal'"
-    [imageUrl]="'/assets/images/logo.png'"
-    [buttonTitle]="'Botón'"
-    [backgroundColor]="'rgb(24 45 222 / 82%)'"
-    [imageWidth]="'80%'"
+    [title]="'Excelencia'"
+    [subtitle]="'Nuestro sabor es'"
+    [imageUrl]="'/assets/images/esquites/original-esquite.png'"
+    [buttonTitle]="'Ir al catálogo'"
+    [backgroundColor]="'rgb(194, 8, 8)'"
+    [imageWidth]="'60%'"
     [imageHeight]="'auto'"
   >
   </app-main-section>
@@ -18,23 +18,48 @@
                     Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
                     Pinzalo. Haz clic aquí para agregar tu propio texto y editar...
                     '"
-    [esquitesTortrixCards]="esquitesTortrixCards"
     [reverseOrder]="false"
+    [titleColor]="'#fff'"
+    [subtitleColor]="'#fff'"
+    [descriptionColor]="'#fff'"
+    [featureBackgroundColor]="'rgb(232, 211, 121)'"
+    [featureBackgroundImage]="'/assets/images/backgrounds/bg-wood.jpeg'"
+    [useBackgroundImage]="true"
+    [swiperBackgroundColor]="'#242424fa'"
+    [contentBackgroundColor]="'rgb(232 211 121 / 86%)'"
+    [esquitesTortrixCards]="esquitesTortrixCards"
     >
     </app-feature-section>
   </div>
   <div class="section-sauces">
     <app-main-section
       [title]="'Salsas'"
-      [subtitle]="'Artesanales'"
-      [imageUrl]="'/assets/images/logo.png'"
-      [buttonTitle]="'Menú'"
-      [backgroundColor]="'rgb(226 17 17 / 79%)'"
-      [buttonMarginLeft]="'-40px'"
+      [subtitle]="'¡Prueba nuestras!'"
+      [imageUrl]="'/assets/images/sauces/chipotle.png'"
+      [buttonTitle]="'Salsas'"
+      [backgroundColor]="'rgb(232 211 121)'"
       [imageWidth]="'80%'"
       [imageHeight]="'auto'"
       >
     </app-main-section>
+  </div>
+  <div class="section-images-sauces">
+    <app-image-section
+      [images]="[{src: '/assets/images/sauces/chipotle.png', alt: 'Image 1'}, {src: '/assets/images/sauces/salsa-queso.png', alt: 'Image 2'}, {src: '/assets/images/sauces/salsa-ranch.png', alt: 'Image 2'}, {src: '/assets/images/sauces/salsa-verde.png', alt: 'Image 2'}, {src: '/assets/images/sauces/chipotle.png', alt: 'Image 2'}]"
+      [imageWidth]="'200px'"
+      [imageHeight]="'200px'"
+      [gap]="'30px'"
+      [backgroundImage]="'/assets/images/backgrounds/bg-table.jpg'"
+      [backgroundColor]="'#000'"
+      [title]="'Salsas'"
+      [titleColor]="'#fff'"
+      [footerBackgroundColor]="'rgb(222 192 192 / 34%)'"
+      [paddingBottom]="'100px'"
+      [parallax]="true"
+      [applyFilter]="false"
+      [filterValue]="'blur(2px)'"
+      >
+    </app-image-section>
   </div>
   <div class="section-esquites-diana">
     <app-feature-section
@@ -46,6 +71,15 @@
                     '"
     [esquitesDianaCards]="esquitesDianaCards"
     [reverseOrder]="true"
+
+    [titleColor]="'#fff'"
+    [subtitleColor]="'#fff'"
+    [descriptionColor]="'#fff'"
+    [featureBackgroundColor]="'red'"
+    [featureBackgroundImage]="'/assets/images/backgrounds/bg-wood.jpeg'"
+    [useBackgroundImage]="true"
+    [swiperBackgroundColor]="'#242424fa'"
+    [contentBackgroundColor]="'#ef9e09'"
     >
     </app-feature-section>
   </div>
@@ -53,11 +87,10 @@
   <div class="section-events">
     <app-main-section
       [title]="'Eventos'"
-      [subtitle]="'¿Ya pensaste que hacer?'"
-      [imageUrl]="'/assets/images/logo.png'"
+      [subtitle]="'¿Es un día especial?'"
+      [imageUrl]="'/assets/images/events/events.jpg'"
       [buttonTitle]="'Menú'"
-      [backgroundColor]="'rgb(226 17 17 / 79%)'"
-      [buttonMarginLeft]="'140px'"
+      [backgroundColor]="'#ae8149'"
       [imageWidth]="'40%'" 
       [imageHeight]="'auto'"
     >
@@ -65,15 +98,20 @@
   </div>
   <div class="section-images">
     <app-image-section
-      [images]="[{src: '/assets/images/logo.png', alt: 'Image 1'}, {src: '/assets/images/logo.png', alt: 'Image 2'}, {src: '/assets/images/logo.png', alt: 'Image 2'}, {src: '/assets/images/logo.png', alt: 'Image 2'}, {src: '/assets/images/logo.png', alt: 'Image 2'}]"
+      [images]="[{src: '/assets/images/drinks/michelada.png', alt: 'Image 1'}, {src: '/assets/images/drinks/nuclear0.png', alt: 'Image 2'}, {src: '/assets/images/drinks/lemon.png', alt: 'Image 2'}, {src: '/assets/images/drinks/tropical.png', alt: 'Image 2'}, {src: '/assets/images/drinks/plutonio.png', alt: 'Image 2'}]"
       [imageWidth]="'200px'"
       [imageHeight]="'200px'"
       [gap]="'30px'"
-      [backgroundImage]="'/assets/images/logo.png'"
+      [backgroundImage]="'/assets/images/backgrounds/bg-bar.jpg'"
       [backgroundColor]="'#000'"
       [title]="'Bebidas'"
+      [titleColor]="'#fff'"
+      [footerBackgroundColor]="'rgb(37 35 34 / 26%)'"
       [paddingBottom]="'100px'"
-      [parallax]="true">
+      [parallax]="true"
+      [applyFilter]="true"
+      [filterValue]="'blur(2px)'"
+      >
     </app-image-section>
   </div>
   <div class="section-esquites-senorial">
@@ -91,25 +129,27 @@
   </div>
   <div class="section-events">
     <app-main-section
-      [title]="'Ubicacines'"
-      [subtitle]="'¿Dónde nos puedes encontrar?'"
-      [imageUrl]="'/assets/images/logo.png'"
-      [buttonTitle]="'Ver ubicaciones'"
-      [backgroundColor]="'rgb(226 17 17 / 79%)'"
-      [buttonMarginLeft]="'220px'"
-      [imageWidth]="'40%'" 
+      [title]="'Ubicaciones'"
+      [subtitle]="''"
+      [imageUrl]="'/assets/images/backgrounds/logo-maps.png'"
+      [buttonTitle]="'Ubicaciones'"
+      [backgroundColor]="'#000'"
+      [imageWidth]="'40%'"
       [imageHeight]="'auto'"
     >
     </app-main-section>
   </div>
+  
 
   <div class="featured-section">
     <app-carousel-section
-      [images]="[{src: '/assets/images/logo.png', alt: 'Image 1'}, {src: '/assets/images/esquites.jpg', alt: 'Image 1'}, {src: '/assets/images/logo.png', alt: 'Image 1'}, {src: '/assets/images/esquites.jpg', alt: 'Image 1'}, {src: '/assets/images/logo.png', alt: 'Image 1'}]"
+      [images]="[{src: '/assets/images/clients-section/farruko.jpg', alt: 'Image 1'}, {src: '/assets/images/esquites.jpg', alt: 'Image 1'}, {src: '/assets/images/clients-section/farruko.jpg', alt: 'Image 1'}, {src: '/assets/images/esquites.jpg', alt: 'Image 1'}, {src: '/assets/images/clients-section/farruko.jpg', alt: 'Image 1'}]"
       [imageWidth]="'90%'"
       [imageHeight]="'auto'"
-      [backgroundColor]="'rgba(255, 243, 116, 0.8)'"
-      [title]="'Featured Section'"
+      [backgroundColor]="'rgba(0, 0, 0, 0.5)'"
+      [backgroundImage]="'/assets/images/backgrounds/ld-vg.jpg'"
+      [showBackgroundImage]="true"
+      [title]="'Clientes del mes'"
       [titleColor]="'#fff'"
       [titleBackgroundColor]="'rgba(0, 0, 0, 0.5)'"
       [parallax]="true"

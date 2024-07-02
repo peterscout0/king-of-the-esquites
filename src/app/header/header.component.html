@@ -1,9 +1,9 @@
-<header class="bg-light shadow-sm px-3 py-2 d-flex align-items-center">
+<header class="header bg-dark text-white px-3 py-2 d-flex align-items-center">
     <div class="menu-container d-flex align-items-center flex-grow-1">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler esquite-icon collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="/assets/images/icon-corn.svg" alt="Menu Icon">
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
@@ -48,7 +48,7 @@
         </nav>
     </div>
     <div *ngIf="showLogo" class="logo-container d-flex justify-content-center align-items-center col-2">
-      <img src="/assets/images/logo.png" alt="Logo" class="img-fluid">
+        <img src="/assets/images/logo.png" alt="Logo" class="img-fluid">
     </div>
     <ng-template #noLogo>
         <div class="logo-placeholder d-flex justify-content-center align-items-center"></div>
