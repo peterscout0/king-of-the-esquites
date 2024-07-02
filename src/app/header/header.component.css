@@ -1,14 +1,18 @@
 .header {
     /* font-family: 'Cursive', sans-serif; */
     height: 100px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #222;
     color: #f8ec78;
     border-bottom: 5px solid #ffc936;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
+    transition: top 0.3s ease-in-out;
 }
 
 .menu-container {

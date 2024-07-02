@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ImageSectionComponent {
   @Input() images: { src: string, alt: string }[] = [];
-  @Input() imageWidth: string = '200px';
-  @Input() imageHeight: string = '200px';
-  @Input() gap: string = '30px';
+  @Input() imageWidth: string = '';
+  @Input() imageHeight: string = '';
+  @Input() gap: string = '';
   @Input() backgroundImage: string = '';
   @Input() backgroundColor: string = '#fff';
   @Input() title: string = '';

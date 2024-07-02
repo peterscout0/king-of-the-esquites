@@ -1,4 +1,4 @@
-import { Component, Input, AfterViewInit, Renderer2 } from '@angular/core';
+import { Component, Input, AfterViewInit, Renderer2, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent implements AfterViewInit {
   @Input() showLogo: boolean = true;
+  private lastScrollTop: number = 0;
 
   constructor(private renderer: Renderer2) {}
 
@@ -24,5 +25,18 @@ export class HeaderComponent implements AfterViewInit {
     navbarCollapse.addEventListener('hidden.bs.collapse', () => {
       this.renderer.removeClass(navbarToggler, 'rotated');
     });
+  }
+  
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const header = document.querySelector('header') as HTMLElement;
+
+    if (currentScroll > this.lastScrollTop) {
+      this.renderer.setStyle(header, 'top', '-100px');
+    } else {
+      this.renderer.setStyle(header, 'top', '0');
+    }
+    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   }
 }

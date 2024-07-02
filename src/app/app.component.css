@@ -5,6 +5,8 @@ main {
     min-height: 100vh;
     width: 100%;
     overflow: hidden; /* Asegúrate de que no haya scroll */
+    padding-top: 100px;
+    background-color: rgb(194, 8, 8);
 }
 
 app-header, app-footer {
