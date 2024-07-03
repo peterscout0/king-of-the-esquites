@@ -1,43 +1,43 @@
 <div class="feature-section" [ngClass]="{'reverse': reverseOrder}" [ngStyle]="backgroundStyle">
-    <div class="swiper-container" [ngStyle]="{'background-color': swiperBackgroundColor}">
+  <div #swiperContainer class="swiper-container" [ngStyle]="{'background-color': swiperBackgroundColor}">
+    <app-swiper-section 
+        *ngIf="esquitesOriginalCards.length > 0" 
+        [title]="'Esquites de la Casa'" 
+        [cards]="esquitesOriginalCards" 
+        [titleColor]="'rgb(232 211 121)'"
+        [navButtonColor]="'#c20808'"
+        [cardBackgroundColor]="'rgb(30 30 30 / 76%)'"
+        [indicatorBackgroundColor]="'#c20808'"
+        [activeIndicatorBorderColor]="'rgb(232 211 121)'"
+      >
+    </app-swiper-section>  
+    <app-swiper-section 
+        *ngIf="esquitesTortrixCards.length > 0" 
+        [title]="'Esquites a lo Chapín'" 
+        [cards]="esquitesTortrixCards" 
+        [titleColor]="'rgb(232 211 121)'"
+        [titleTextShadow]="'rgb(0, 0, 0) -3px 3px 0px'"
+        [navButtonColor]="'#08a1f2'"
+        [cardBackgroundColor]="'rgb(30 30 30 / 76%)'"
+        [indicatorBackgroundColor]="'#08a1f2'"
+        [activeIndicatorBorderColor]="'rgb(232 211 121)'">
+      </app-swiper-section>
       <app-swiper-section 
-          *ngIf="esquitesOriginalCards.length > 0" 
-          [title]="'Esquites de la Casa'" 
-          [cards]="esquitesOriginalCards" 
-          [titleColor]="'rgb(232 211 121)'"
-          [navButtonColor]="'#c20808'"
-          [cardBackgroundColor]="'rgb(30 30 30 / 76%)'"
-          [indicatorBackgroundColor]="'#c20808'"
-          [activeIndicatorBorderColor]="'rgb(232 211 121)'"
-        >
-      </app-swiper-section>  
-      <app-swiper-section 
-          *ngIf="esquitesTortrixCards.length > 0" 
-          [title]="'Esquites a lo Chapín'" 
-          [cards]="esquitesTortrixCards" 
-          [titleColor]="'rgb(232 211 121)'"
-          [titleTextShadow]="'rgb(0, 0, 0) -3px 3px 0px'"
-          [navButtonColor]="'#08a1f2'"
-          [cardBackgroundColor]="'rgb(30 30 30 / 76%)'"
-          [indicatorBackgroundColor]="'#08a1f2'"
-          [activeIndicatorBorderColor]="'rgb(232 211 121)'">
-        </app-swiper-section>
-        <app-swiper-section 
-          *ngIf="esquitesDianaCards.length > 0" 
-          [title]="'Esquites a la DIANA'" 
-          [cards]="esquitesDianaCards" 
-          [titleColor]="'#c4192f'"
-          [navButtonColor]="'#c4192f'"
-          [cardBackgroundColor]="'#c4192f'"
-          [indicatorBackgroundColor]="'#ffc20b'"
-          [activeIndicatorBorderColor]="'#c4192f'"
-        >
-        </app-swiper-section>
-    </div>
-    <div class="content-section" [ngStyle]="{'background-color': contentBackgroundColor}">
-        <h1 class="fw-bold" [ngStyle]="titleStyle">{{ title }}</h1>
-        <h2 class="fw-bolder" [ngStyle]="subtitleStyle">{{ subtitle }}</h2>
-        <p class="mb-3" [ngStyle]="descriptionStyle">{{ description }}</p>
-        <app-menu-button [menutitle]="buttonTitle" width="220px" height="70px" marginLeft="125px" lineWidth="75px" [ngClass]="{'reverse-button': reverseOrder}"></app-menu-button>
-    </div>
+        *ngIf="esquitesDianaCards.length > 0" 
+        [title]="'Esquites a la DIANA'" 
+        [cards]="esquitesDianaCards" 
+        [titleColor]="'#c4192f'"
+        [navButtonColor]="'#c4192f'"
+        [cardBackgroundColor]="'#c4192f'"
+        [indicatorBackgroundColor]="'#ffc20b'"
+        [activeIndicatorBorderColor]="'#c4192f'"
+      >
+      </app-swiper-section>
+  </div>
+  <div #contentSection class="content-section" [ngStyle]="{'background-color': contentBackgroundColor}">
+      <h1 class="fw-bold" [ngStyle]="titleStyle">{{ title }}</h1>
+      <h2 class="fw-bolder" [ngStyle]="subtitleStyle">{{ subtitle }}</h2>
+      <p class="mb-3" [ngStyle]="descriptionStyle">{{ description }}</p>
+      <app-menu-button [menutitle]="buttonTitle" width="220px" height="70px" marginLeft="125px" lineWidth="75px" [ngClass]="{'reverse-button': reverseOrder}"></app-menu-button>
+  </div>
 </div>

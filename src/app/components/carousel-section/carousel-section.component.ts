@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-carousel-section',
@@ -8,7 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './carousel-section.component.html',
   styleUrls: ['./carousel-section.component.css'],
 })
-export class CarouselSectionComponent implements OnInit {
+export class CarouselSectionComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() images: { src: string, alt: string }[] = [];
   @Input() imageWidth: string = '85%';
   @Input() imageHeight: string = 'auto';
@@ -23,10 +24,35 @@ export class CarouselSectionComponent implements OnInit {
   @Input() transitionDuration: number = 5000;
   @Input() imageFilter: string = '';
 
+  @ViewChild('imageContainer', { static: false }) imageContainerEl!: ElementRef<HTMLDivElement>;
+  @ViewChild('sectionTitle', { static: false }) sectionTitleEl!: ElementRef<HTMLHeadingElement>;
+
   currentIndex: number = 0;
+  isMobile: boolean = false;
+  observer: IntersectionObserver | null = null;
+  isAnimatingImage: boolean = false;
+  isAnimatingTitle: boolean = false;
 
   ngOnInit() {
+    this.isMobile = window.innerWidth <= 768;
     this.startAutoSlide();
+  }
+
+  ngAfterViewInit() {
+    if (!this.isMobile) {
+      this.setupIntersectionObserver();
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.observer) {
+      if (this.imageContainerEl) {
+        this.observer.unobserve(this.imageContainerEl.nativeElement);
+      }
+      if (this.sectionTitleEl) {
+        this.observer.unobserve(this.sectionTitleEl.nativeElement);
+      }
+    }
   }
 
   startAutoSlide() {
@@ -34,6 +60,61 @@ export class CarouselSectionComponent implements OnInit {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
     }, this.transitionDuration);
   }
+
+  setupIntersectionObserver() {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Start animation when 50% of the element is visible
+    };
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target === this.imageContainerEl.nativeElement && !this.isAnimatingImage) {
+            this.animateImageContainer();
+          }
+          if (entry.target === this.sectionTitleEl.nativeElement && !this.isAnimatingTitle) {
+            this.animateSectionTitle();
+          }
+        }
+      });
+    }, options);
+
+    if (this.imageContainerEl) {
+      this.observer.observe(this.imageContainerEl.nativeElement);
+    }
+    if (this.sectionTitleEl) {
+      this.observer.observe(this.sectionTitleEl.nativeElement);
+    }
+  }
+
+  animateImageContainer() {
+    this.isAnimatingImage = true;
+    gsap.from(this.imageContainerEl.nativeElement, {
+      duration: 1.5,
+      opacity: 0,
+      y: 50,
+      ease: 'power2.out',
+      onComplete: () => { 
+        this.isAnimatingImage = false; // Reset the flag when animation completes
+      }
+    });
+  }
+
+  animateSectionTitle() {
+    this.isAnimatingTitle = true;
+    gsap.from(this.sectionTitleEl.nativeElement, {
+      duration: 1.5,
+      opacity: 0,
+      y: 50,
+      ease: 'power2.out',
+      onComplete: () => { 
+        this.isAnimatingTitle = false; // Reset the flag when animation completes
+      }
+    });
+  }
+
 
   get backgroundStyle() {
     return {

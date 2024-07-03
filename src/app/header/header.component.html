@@ -10,7 +10,7 @@
                         <li class="nav-item">
                             <a class="nav-link" routerLink="/inicio">INICIO</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" #navItem>
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkEsquites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 ESQUITES
                             </a>
@@ -21,7 +21,7 @@
                                 <li><a class="dropdown-item" routerLink="/esquites/senorial">Señorial</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" #navItem>
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkSalsas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 SALSAS
                             </a>
@@ -33,13 +33,13 @@
                                 <li><a class="dropdown-item" routerLink="/salsas/laesquitera">La Esquitera</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" #navItem>
                             <a class="nav-link" routerLink="/eventos">EVENTOS</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" #navItem>
                             <a class="nav-link" routerLink="/sucursales">SUCURSALES</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" #navItem>
                             <a class="nav-link" routerLink="/sobrenosotros">SOBRE NOSOTROS</a>
                         </li>
                     </ul>
@@ -47,7 +47,7 @@
             </div>
         </nav>
     </div>
-    <div *ngIf="showLogo" class="logo-container d-flex justify-content-center align-items-center col-2">
+    <div *ngIf="showLogo" class="logo-container d-flex justify-content-center align-items-center col-2" #navItem>
         <img src="/assets/images/logo.png" alt="Logo" class="img-fluid">
     </div>
     <ng-template #noLogo>

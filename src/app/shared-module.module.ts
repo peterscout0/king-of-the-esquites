@@ -7,7 +7,6 @@ import { MatCardModule } from '@angular/material/card';
 // import { MenuButtonComponent } from './components/buttons/menu-button/menu-button.component';
 // import { ImageSectionComponent } from './components/image-section/image-section.component';
 // import { CarouselSectionComponent } from './components/carousel-section/carousel-section.component';
-
 @NgModule({
   declarations: [
     // Añade aquí cualquier otro componente

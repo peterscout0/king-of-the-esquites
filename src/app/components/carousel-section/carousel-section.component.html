@@ -1,6 +1,6 @@
 <div class="carousel-section" [ngStyle]="backgroundStyle">
-    <div class="image-container">
+    <div #imageContainer class="image-container">
       <img [src]="images[currentIndex]?.src" [alt]="images[currentIndex]?.alt" [ngStyle]="imageStyle">
     </div>
-    <h2 class="section-title" [ngStyle]="titleStyle">{{ title }}</h2>
+    <h2 #sectionTitle class="section-title" [ngStyle]="titleStyle">{{ title }}</h2>
 </div>

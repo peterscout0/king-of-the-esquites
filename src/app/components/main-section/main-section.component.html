@@ -1,11 +1,13 @@
-<div class="main-section" [ngStyle]="backgroundStyle">
+<div #mainSection class="main-section" [ngStyle]="backgroundStyle">
   <div class="background-overlay"></div>
   <div class="content">
-    <img [src]="imageUrl" alt="" class="center-image" [ngStyle]="imageStyle">
+    <div class="image-wrapper" *ngIf="imageUrl">
+      <img #image [src]="imageUrl" alt="" class="center-image" [ngStyle]="imageStyle">
+    </div>
     <div class="text-content">
-      <h2 class="fw-bolder" [ngStyle]="subtitleStyle">{{ subtitle }}</h2>
-      <h1 class="fw-bold" [ngStyle]="titleStyle">{{ title }}</h1>
-      <div class="mt-5 button-container" [ngStyle]="{'margin-left': buttonMarginLeft}">
+      <h2 #subtitle class="fw-bolder" [ngStyle]="subtitleStyle">{{ subtitle }}</h2>
+      <h1 #title class="fw-bold" [ngStyle]="titleStyle">{{ title }}</h1>
+      <div #buttonContainer class="mt-5 button-container" [ngStyle]="{'margin-left': buttonMarginLeft}">
         <app-menu-button [menutitle]="buttonTitle"></app-menu-button>
       </div>
     </div>

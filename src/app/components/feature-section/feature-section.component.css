@@ -1,150 +1,150 @@
 .feature-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    height: 100vh;
-    background-color: rgb(232, 211, 121);
-    background-size: cover;
-    background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  height: 100vh;
+  background-color: rgb(232, 211, 121);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .feature-section.reverse {
-    /* grid-template-columns: 1fr 1fr; */
-    direction: rtl;
+  /* grid-template-columns: 1fr 1fr; */
+  direction: rtl;
 }
 
 .feature-section.reverse > .swiper-container,
 .feature-section.reverse > .content-section {
-  direction: ltr;
+direction: ltr;
 }
 
 .feature-section.reverse > .swiper-container {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .feature-section.reverse > .content-section {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .swiper-container {
-    /* width: 50%; */
-    background-color: #242424fa;
-    padding: 20px; 
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+  /* width: 50%; */
+  background-color: #242424fa;
+  padding: 20px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .content-section {
-    padding: 20px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .content-section h1,
 .content-section h2,
 .content-section p {
-  margin: 10px 0;
+margin: 10px 0;
 }
 
 .content-section > app-menu-button {
-    position: absolute;
-    bottom: 35px;
-    left: -10px;
-    right: 20px;
+  position: absolute;
+  bottom: 35px;
+  left: -10px;
+  right: 20px;
 }
 
 .content-section > app-menu-button.reverse-button {
-    bottom: 30px;
-    left: -10px;
+  bottom: 30px;
+  left: -10px;
 }
 
 @media (max-width: 1200px) {
-    .feature-section {
-      grid-template-columns: 1fr;
-      height: auto;
-    }
-    
-    .swiper-container,
-    .content-section {
-      border-radius: 8px;
-    }
-  
-    .content-section > app-menu-button {
-      position: static;
-      margin-top: 30px;
-    }
+  .feature-section {
+    grid-template-columns: 1fr;
+    height: auto;
   }
   
-  @media (max-width: 768px) {
-    .feature-section {
-      grid-template-columns: 1fr;
-    }
-  
-    .swiper-container,
-    .content-section {
-      border-radius: 8px;
-    }
-  
-    .content-section h1 {
-      font-size: 1.8em;
-    }
-  
-    .content-section h2 {
-      font-size: 1.4em;
-    }
-  
-    .content-section p {
-      font-size: 1em;
-    }
-  
-    .content-section > app-menu-button {
-      position: static;
-      margin-top: 15px;
-    }
+  .swiper-container,
+  .content-section {
+    border-radius: 8px;
   }
-  
-  @media (max-width: 480px) {
-    .feature-section {
-      grid-template-columns: 1fr;
-    }
-  
-    .swiper-container,
-    .content-section {
-      border-radius: 8px;
-      padding: 10px;
-    }
-  
-    .content-section h1 {
-      font-size: 1.5em;
-    }
-  
-    .content-section h2 {
-      font-size: 1.2em;
-    }
-  
-    .content-section p {
-      font-size: 0.9em;
-    }
-  
-    .content-section > app-menu-button {
-      position: static;
-      margin-top: 10px;
-    }
+
+  .content-section > app-menu-button {
+    position: static;
+    margin-top: 30px;
   }
+}
+
+@media (max-width: 768px) {
+  .feature-section {
+    grid-template-columns: 1fr;
+  }
+
+  .swiper-container,
+  .content-section {
+    border-radius: 8px;
+  }
+
+  .content-section h1 {
+    font-size: 1.8em;
+  }
+
+  .content-section h2 {
+    font-size: 1.4em;
+  }
+
+  .content-section p {
+    font-size: 1em;
+  }
+
+  .content-section > app-menu-button {
+    position: static;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-section {
+    grid-template-columns: 1fr;
+  }
+
+  .swiper-container,
+  .content-section {
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .content-section h1 {
+    font-size: 1.5em;
+  }
+
+  .content-section h2 {
+    font-size: 1.2em;
+  }
+
+  .content-section p {
+    font-size: 0.9em;
+  }
+
+  .content-section > app-menu-button {
+    position: static;
+    margin-top: 10px;
+  }
+}

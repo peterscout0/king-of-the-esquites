@@ -1,18 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { MenuButtonComponent } from '../buttons/menu-button/menu-button.component';
 import { SwiperSectionComponent } from '../swiper-section/swiper-section.component';
 import { SwiperCard } from '../../models/swiper-card.model';
 import { CommonModule } from '@angular/common';
 import { SharedModuleModule } from '../../shared-module.module';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-feature-section',
   standalone: true,
   imports: [CommonModule, MenuButtonComponent, SwiperSectionComponent, SharedModuleModule],
   templateUrl: './feature-section.component.html',
-  styleUrl: './feature-section.component.css'
+  styleUrl: './feature-section.component.css',
 })
-export class FeatureSectionComponent {
+export class FeatureSectionComponent implements AfterViewInit, OnDestroy {
   @Input() title!: string;
   @Input() subtitle!: string;
   @Input() description!: string;
@@ -36,6 +37,86 @@ export class FeatureSectionComponent {
   @Input() esquitesDianaCards: SwiperCard[] = [];
   @Input() esquitesTortrixCards: SwiperCard[] = [];
   @Input() esquitesOriginalCards: SwiperCard[] = [];
+
+  @ViewChild('swiperContainer', { static: false }) swiperContainerEl!: ElementRef<HTMLDivElement>;
+  @ViewChild('contentSection', { static: false }) contentSectionEl!: ElementRef<HTMLDivElement>;
+
+  isMobile: boolean = false;
+  observer: IntersectionObserver | null = null;
+  isAnimatingSwiper: boolean = false;
+  isAnimatingContent: boolean = false;
+
+  ngAfterViewInit() {
+    this.isMobile = window.innerWidth <= 768;
+    if (!this.isMobile) {
+      this.setupIntersectionObserver();
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.observer) {
+      if (this.swiperContainerEl) {
+        this.observer.unobserve(this.swiperContainerEl.nativeElement);
+      }
+      if (this.contentSectionEl) {
+        this.observer.unobserve(this.contentSectionEl.nativeElement);
+      }
+    }
+  }
+
+  setupIntersectionObserver() {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Start animation when 50% of the element is visible
+    };
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target === this.swiperContainerEl.nativeElement && !this.isAnimatingSwiper) {
+            this.animateSwiperContainer();
+          }
+          if (entry.target === this.contentSectionEl.nativeElement && !this.isAnimatingContent) {
+            this.animateContentSection();
+          }
+        }
+      });
+    }, options);
+
+    if (this.swiperContainerEl) {
+      this.observer.observe(this.swiperContainerEl.nativeElement);
+    }
+    if (this.contentSectionEl) {
+      this.observer.observe(this.contentSectionEl.nativeElement);
+    }
+  }
+
+  animateSwiperContainer() {
+    this.isAnimatingSwiper = true;
+    gsap.from(this.swiperContainerEl.nativeElement, {
+      duration: 1.5,
+      opacity: 0,
+      x: -100,
+      ease: 'power2.out',
+      onComplete: () => { 
+        this.isAnimatingSwiper = false; // Reset the flag when animation completes
+      }
+    });
+  }
+
+  animateContentSection() {
+    this.isAnimatingContent = true;
+    gsap.from(this.contentSectionEl.nativeElement, {
+      duration: 1.5,
+      opacity: 0,
+      x: 100,
+      ease: 'power2.out',
+      onComplete: () => { 
+        this.isAnimatingContent = false; // Reset the flag when animation completes
+      }
+    });
+  }
 
   get backgroundStyle() {
     if (this.useGradient) {

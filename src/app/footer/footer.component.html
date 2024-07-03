@@ -1,25 +1,25 @@
 <footer class="bg-dark text-white pt-4 pb-3">
     <div class="container text-center text-md-left">
         <div class="row text-center">
-            <div class="col-md-3 mb-3">
+            <div class="col-md-3 mb-3" #animateItem>
                 <h5 class="text-uppercase">Dirección</h5>
                 <div *ngFor="let address of addresses" class="hover-effect">
                     <p>{{ address.line1 }}<br>{{ address.line2 }}</p>
                 </div>
             </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-3" #animateItem>
                 <h5 class="text-uppercase">Contacto</h5>
                 <div *ngFor="let contact of contacts" class="hover-effect">
                     <p>{{ contact.info }}<br>Tel: {{ contact.phone }}</p>
                 </div>
             </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-3" #animateItem>
                 <h5 class="text-uppercase">Horario</h5>
                 <div *ngFor="let hours of operatingHours" class="hover-effect">
                     <p>{{ hours.days }}<br>{{ hours.time }}</p>
                 </div>
             </div>
-            <div class="col-md-3 mb-3">
+            <div class="col-md-3 mb-3" #animateItem>
                 <h5 class="text-uppercase king-title">King Of The Esquites</h5>
                 <ul class="list-unstyled list-inline social-icons">
                     <li *ngFor="let link of socialLinks" class="list-inline-item">
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center" #animateItem>
                 ©2024 por King Of The Esquites. Todos los derechos reservados.
             </div>
         </div>
