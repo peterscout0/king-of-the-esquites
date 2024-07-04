@@ -8,17 +8,17 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" routerLink="/inicio">INICIO</a>
+                            <a class="nav-link" routerLink="/" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">INICIO</a>
                         </li>
                         <li class="nav-item dropdown" #navItem>
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkEsquites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLinkEsquites" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 ESQUITES
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkEsquites">
-                                <li><a class="dropdown-item" routerLink="/esquites/original">Original</a></li>
-                                <li><a class="dropdown-item" routerLink="/esquites/tortrix">Tortrix</a></li>
-                                <li><a class="dropdown-item" routerLink="/esquites/diana">Diana</a></li>
-                                <li><a class="dropdown-item" routerLink="/esquites/senorial">Señorial</a></li>
+                                <li><a class="dropdown-item" routerLink="/productos/Esquites%20Original"  routerLinkActive="active">Original</a></li>
+                                <li><a class="dropdown-item" routerLink="/productos/Esquites%20Tortrix"  routerLinkActive="active">Tortrix</a></li>
+                                <li><a class="dropdown-item" routerLink="/esquites/diana"  routerLinkActive="active">Diana</a></li>
+                                <li><a class="dropdown-item" routerLink="/esquites/senorial"  routerLinkActive="active">Señorial</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown" #navItem>

@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef, AfterViewInit, OnChanges, SimpleChanges, OnDestroy} from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewInit, OnChanges, SimpleChanges, OnDestroy} from '@angular/core';
 import { MenuButtonComponent } from '../buttons/menu-button/menu-button.component';
 import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
@@ -28,6 +28,8 @@ export class MainSectionComponent implements AfterViewInit, OnChanges, OnDestroy
   @Input() subtitleColor: string = '#fff';
   @Input() titleTextShadow: string = 'none';
   @Input() subtitleTextShadow: string = 'none';
+  @Output() buttonClick = new EventEmitter<void>();
+  
   
   @ViewChild('title', { static: false }) titleEl!: ElementRef<HTMLHeadingElement>;
   @ViewChild('subtitle', { static: false }) subtitleEl!: ElementRef<HTMLHeadingElement>;

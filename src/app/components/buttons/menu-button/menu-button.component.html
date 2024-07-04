@@ -1,4 +1,9 @@
-<button class="button" [style.--button-width]="width" [style.--button-height]="height" [style.--button-margin-left]="marginLeft" [style.--button-line-width]="lineWidth">
+<button class="button" 
+    [style.--button-width]="width" 
+    [style.--button-height]="height" 
+    [style.--button-margin-left]="marginLeft" 
+    [style.--button-line-width]="lineWidth"
+    (click)="onClick()">
     <b>{{ menutitle }}</b>
     <div></div>
 </button>

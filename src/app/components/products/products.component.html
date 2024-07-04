@@ -1,0 +1,22 @@
+<!-- products.component.html -->
+<div class="container pt-4">
+    <div class="categories-container mb-4">
+      <div class="category-item" *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria)">
+        <img [src]="categoria.imagen" class="category-image" alt="{{ categoria.nombre }}">
+        <div class="category-name">{{ categoria.nombre }}</div>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4" *ngFor="let producto of productosFiltrados">
+        <div class="card h-100 shadow-sm">
+          <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ producto.nombre }}</h5>
+            <p class="card-text">Q{{ producto.precio }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

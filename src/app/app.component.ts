@@ -12,7 +12,7 @@ import { SwiperCard } from './models/swiper-card.model';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, HomeComponent, FooterComponent, FontAwesomeModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = "king-of-the-esquites";

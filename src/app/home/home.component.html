@@ -11,6 +11,7 @@
     [subtitleColor]="'#550505f0'"
     [titleTextShadow]="'rgb(96, 12, 12) -3px 2px 0px'"
     [subtitleTextShadow]="'rgb(116, 13, 13) -2px 2px 0px'"
+    (buttonClick)="navigateToCatalog()"
   >
   </app-main-section>
 </div>
@@ -70,7 +71,8 @@
     <app-feature-section
     [title]="'¡Ya los probaste!'"
     [subtitle]="'Esquiteate a lo chapín'"
-    [description]="'Usamos productos 100% nacionales para la elaboración de nuestros esquites.
+    [description]="'Pruebalos con Tortrix y Doritos. Usamos productos 100% 
+                    nacionales para la elaboración de nuestros esquites.
                     Apoyando a la economía local.
                     '"
     [buttonTitle]="'Tortrix'"

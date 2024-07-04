@@ -56,6 +56,17 @@
     background-color: transparent;
 }
 
+.menu-container .nav-link.active {
+    color: #fff;
+    text-shadow: 0 0 8px #f8ec78;
+}
+
+/* Sobrescribir el fondo azul predeterminado de Bootstrap */
+.menu-container .dropdown-item.active,
+.menu-container .dropdown-item:active {
+    background-color: transparent;
+}
+
 .logo-container, .logo-placeholder {
     flex: 0 0 15%;
     display: flex;

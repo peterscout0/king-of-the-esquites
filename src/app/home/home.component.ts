@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { FeatureSectionComponent } from '../components/feature-section/feature-section.component';
 import { MainSectionComponent } from '../components/main-section/main-section.component';
 import { MenuButtonComponent } from '../components/buttons/menu-button/menu-button.component';
@@ -14,7 +15,7 @@ import { SeparatorSectionComponent } from '../components/separator-section/separ
   standalone: true,
   imports: [MenuButtonComponent, FeatureSectionComponent, MainSectionComponent, ImageSectionComponent, CarouselSectionComponent, SeparatorSectionComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
@@ -22,9 +23,11 @@ export class HomeComponent implements OnInit {
   @Input() esquitesDianaCards: SwiperCard[] = [];
   @Input() esquitesOriginalCards: SwiperCard[] = [];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-    // No se necesita inicialización específica en este momento
+  ngOnInit() {}
+
+  navigateToCatalog() {
+    this.router.navigate(['/productos']);
   }
 }

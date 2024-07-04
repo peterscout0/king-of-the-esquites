@@ -1,0 +1,44 @@
+/* products.component.css */
+.container {
+    margin-top: 150px; /* Ajusta el margen superior para tener en cuenta el header */
+  }
+  
+  .categories-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .category-item {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .category-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .category-name {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .category-item:hover .category-image {
+    transform: scale(1.05);
+  }
+  
+  .card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  

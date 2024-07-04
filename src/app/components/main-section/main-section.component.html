@@ -8,7 +8,7 @@
       <h2 #subtitle class="fw-bolder" [ngStyle]="subtitleStyle">{{ subtitle }}</h2>
       <h1 #title class="fw-bold" [ngStyle]="titleStyle">{{ title }}</h1>
       <div #buttonContainer class="mt-5 button-container" [ngStyle]="{'margin-left': buttonMarginLeft}">
-        <app-menu-button [menutitle]="buttonTitle"></app-menu-button>
+        <app-menu-button [menutitle]="buttonTitle" (buttonClick)="buttonClick.emit()"></app-menu-button>
       </div>
     </div>
   </div>
