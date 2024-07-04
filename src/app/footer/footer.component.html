@@ -10,7 +10,8 @@
                 <div class="col-md-3 mb-3" #animateItem>
                 <h5 class="text-uppercase">Contacto</h5>
                 <div *ngFor="let contact of contacts" class="hover-effect">
-                    <p>{{ contact.info }}<br>Tel: {{ contact.phone }}</p>
+                    <!-- <p>{{ contact.info }}<br>Tel: {{ contact.phone }}</p> -->
+                    <p (click)="handleContactClick(contact.info, contact.phone)">{{ contact.info }}<br>Tel: {{ contact.phone }}</p>
                 </div>
             </div>
                 <div class="col-md-3 mb-3" #animateItem>
@@ -23,7 +24,7 @@
                 <h5 class="text-uppercase king-title">King Of The Esquites</h5>
                 <ul class="list-unstyled list-inline social-icons">
                     <li *ngFor="let link of socialLinks" class="list-inline-item">
-                        <a href="#" class="text-white">
+                        <a href="javascript:void(0);" class="text-white" (click)="handleSocialLinkClick($event, link)">
                             <fa-icon [icon]="[link.iconPrefix, link.iconName]"></fa-icon>
                         </a>
                     </li>

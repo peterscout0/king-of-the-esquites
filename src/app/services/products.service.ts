@@ -14,17 +14,16 @@ export class ProductsService {
     { nombre: 'Esquites Señorial', imagen: '/assets/images/esquites/doritos/dorito-rojo.png' },
     { nombre: 'Salsas', imagen: '/assets/images/sauces/chipotle.png' },
     { nombre: 'Bebidas', imagen: '/assets/images/drinks/nuclear.png' },
-    { nombre: 'Combos', imagen: '/assets/images/esquites/tortrix/tortrix-jala-chapi.png' },
-    { nombre: 'Para Compartir', imagen: '/assets/images/esquites/tortrix/tortrix-jala-chapi.png' }
+    // { nombre: 'Combos', imagen: '/assets/images/esquites/tortrix/tortrix-jala-chapi.png' },
+    // { nombre: 'Para Compartir', imagen: '/assets/images/esquites/tortrix/tortrix-jala-chapi.png' }
   ];
 
   private productos: Producto[] = [
-    { nombre: 'La Tremenda', precio: 65, imagen: '/assets/images/esquites/colocha.png', categoria: 'Esquites Original' },
+    { nombre: 'La Tremenda', precio: 65, imagen: '/assets/images/esquites/colocha.png', categoria: 'Esquites Original', textoHover: 'Pedir', numeroWhatsApp: '1234567890' },
     { nombre: 'La Carnuda', precio: 35, imagen: '/assets/images/esquites/original-no-picante.png', categoria: 'Esquites Original', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
     { nombre: 'La Carnuda', precio: 35, imagen: '/assets/images/esquites/original-esquite2.png', categoria: 'Esquites Original' },
     { nombre: 'La Carnuda', precio: 35, imagen: '/assets/images/esquites/original-esquite2.png', categoria: 'Esquites Original' },
     { nombre: 'La Carnuda', precio: 35, imagen: '/assets/images/esquites/original-esquite2.png', categoria: 'Esquites Original' },
-    // Añade todos los productos necesarios
 
     // Productos de Esquites Tortrix
     { nombre: 'Tortrix Clásico', precio: 45, imagen: '/assets/images/esquites/tortrix/tortrix-classic.png', categoria: 'Esquites Tortrix' },

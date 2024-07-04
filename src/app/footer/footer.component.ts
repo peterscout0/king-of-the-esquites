@@ -15,6 +15,7 @@ export class FooterComponent implements AfterViewInit {
   @Input() contacts!: any[];
   @Input() operatingHours!: any[];
   @Input() socialLinks!: any[];
+  @Input() whatsappNumber!: string;
 
   @ViewChildren('animateItem') animateItems!: QueryList<ElementRef>;
 
@@ -64,5 +65,26 @@ export class FooterComponent implements AfterViewInit {
       stagger: 0.2,
       ease: 'power2.out'
     });
+  }
+
+  handleContactClick(info: string, phone: string) {
+    let url: string;
+    if (info.toLowerCase().includes('whatsapp')) {
+      url = `https://wa.me/${phone.replace(/[-\s]/g, '')}`;
+    } else {
+      url = `tel:${phone}`;
+    }
+    window.open(url, '_blank');
+  }
+
+  handleSocialLinkClick(event: Event, link: any) {
+    event.preventDefault();
+    let url: string;
+    if (link.iconName === 'whatsapp') {
+      url = `https://wa.me/${this.whatsappNumber}`;
+    } else {
+      url = link.url;
+    }
+    window.open(url, '_blank');
   }
 }

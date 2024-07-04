@@ -13,8 +13,9 @@
       <div class="card shadow-sm product-card">
         <div class="card-img-container">
           <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
-          <div class="card-hover-overlay">
-            <span>Pedir</span>
+          <!-- <div class="card-hover-overlay" (click)="irAWhatsApp(producto.numeroWhatsApp ?? '0000000000')"> -->
+          <div class="card-hover-overlay" (click)="irAWhatsApp('1234567890')">
+            <span>Chat de Whatsapp</span>
           </div>
           <div *ngIf="producto.esNuevo" class="nuevo-badge" [ngStyle]="{ 'background-color': producto.colorFondoNuevo, 'transform': 'rotate(' + producto.rotacionNuevo + ')' }">
             {{ producto.mensajeNuevo }}

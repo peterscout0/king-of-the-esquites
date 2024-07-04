@@ -5,7 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faFacebookF, faInstagram, faTwitter, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faTwitter, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 // import { SwiperCard } from './models/swiper-card.model';
 @Component({
   selector: 'app-root',
@@ -33,16 +33,19 @@ export class AppComponent {
     { days: "Sábados y Domingos", time: "10AM-6PM" }
   ];
   
+  
   socialLinks = [
-    { iconPrefix: 'fab', iconName: 'facebook-f' },
-    { iconPrefix: 'fab', iconName: 'instagram' },
-    { iconPrefix: 'fab', iconName: 'twitter' },
-    { iconPrefix: 'fab', iconName: 'tiktok' }
+    { iconPrefix: 'fab', iconName: 'facebook-f', url: 'https://www.facebook.com' },
+    { iconPrefix: 'fab', iconName: 'instagram', url: 'https://www.instagram.com' },
+    { iconPrefix: 'fab', iconName: 'twitter', url: 'https://www.twitter.com' },
+    { iconPrefix: 'fab', iconName: 'tiktok', url: 'https://www.tiktok.com' },
+    { iconPrefix: 'fab', iconName: 'whatsapp' }
   ];
   
+  whatsappNumber = '12344567';
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faFacebookF, faInstagram, faTwitter, faTiktok);
+    library.addIcons(faFacebookF, faInstagram, faTwitter, faTiktok, faWhatsapp);
   }
 
 }

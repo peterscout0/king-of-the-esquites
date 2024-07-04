@@ -53,4 +53,9 @@ export class ProductsComponent implements OnInit {
       this.filtrarProductos();
     }
   }
+
+  irAWhatsApp(numero: string) {
+    const url = `https://wa.me/${numero}`;
+    window.open(url, '_blank');
+  }
 }

@@ -9,6 +9,7 @@
 
 .categories-container {
   display: flex;
+  justify-content: space-evenly;
   overflow-x: auto;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
@@ -86,6 +87,7 @@
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .card-img-container:hover .card-hover-overlay {

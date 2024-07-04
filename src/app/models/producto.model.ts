@@ -7,6 +7,8 @@ export interface Producto {
   mensajeNuevo?: string;
   colorFondoNuevo?: string;
   rotacionNuevo?: string;
+  textoHover?: string;
+  numeroWhatsApp?: string;
 }
 
 export interface Categoria {
