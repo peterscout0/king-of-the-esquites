@@ -1,22 +1,30 @@
-<!-- products.component.html -->
 <div class="container pt-4">
-    <div class="categories-container mb-4">
-      <div class="category-item" *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria)">
+  <div class="categories-container mb-4">
+    <div class="category-item" *ngFor="let categoria of categorias" 
+        (click)="seleccionarCategoria(categoria)" 
+        [ngClass]="{'active': categoriaSeleccionada === categoria.nombre}">
         <img [src]="categoria.imagen" class="category-image" alt="{{ categoria.nombre }}">
         <div class="category-name">{{ categoria.nombre }}</div>
-      </div>
     </div>
-  
-    <div class="row mt-4">
-      <div class="col-md-4 mb-4" *ngFor="let producto of productosFiltrados">
-        <div class="card h-100 shadow-sm">
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4" *ngFor="let producto of productosFiltrados">
+      <div class="card shadow-sm product-card">
+        <div class="card-img-container">
           <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
-          <div class="card-body text-center">
-            <h5 class="card-title">{{ producto.nombre }}</h5>
-            <p class="card-text">Q{{ producto.precio }}</p>
+          <div class="card-hover-overlay">
+            <span>Pedir</span>
           </div>
+          <div *ngIf="producto.esNuevo" class="nuevo-badge" [ngStyle]="{ 'background-color': producto.colorFondoNuevo, 'transform': 'rotate(' + producto.rotacionNuevo + ')' }">
+            {{ producto.mensajeNuevo }}
+          </div>
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">Q{{ producto.precio }}</p>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

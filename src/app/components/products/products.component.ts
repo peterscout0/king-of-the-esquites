@@ -1,18 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router'
+import { ProductsService } from '../../services/products.service';
+import { Producto, Categoria } from '../../models/producto.model';
+import { gsap } from 'gsap';
 
-interface Producto {
-  nombre: string;
-  precio: number;
-  imagen: string;
-  categoria: string;
-}
-
-interface Categoria {
-  nombre: string;
-  imagen: string;
-}
 
 @Component({
   selector: 'app-products',
@@ -22,40 +14,43 @@ interface Categoria {
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  categorias: Categoria[] = [
-    { nombre: 'Esquites Original', imagen: '/assets/images/esquites/original-esquite.png' },
-    { nombre: 'Esquites Tortrix', imagen: '/assets/images/esquites/tortrix/tortrix-detodito2.png' },
-    { nombre: 'Esquites Diana', imagen: '/assets/images/esquites/diana/tozteca.png' },
-    { nombre: 'Esquites Señorial', imagen: '/assets/images/esquites/doritos/dorito-rojo.png' },
-    { nombre: 'Salsas', imagen: '/assets/images/sauces/chipotle.png' },
-    { nombre: 'Bebidas', imagen: '/assets/images/drinks/nuclear.png' },
-    { nombre: 'Combos', imagen: '/assets/images/esquites/tortrix/tortrix-jala-chapi.png' },
-    { nombre: 'Para Compartir', imagen: '/assets/images/esquites/tortrix/tortrix-jala-chapi.png' }
-  ];
-  productos: Producto[] = [
-    { nombre: 'La Tremenda', precio: 65, imagen: '/assets/images/esquites/original-esquite.png', categoria: 'Esquites Original' },
-    { nombre: 'La Carnuda', precio: 35, imagen: '/assets/images/esquites/original-esquite2.png', categoria: 'Esquites Original' },
-    // Añade todos los productos necesarios
-  ];
+
+  categorias: Categoria[] = [];
+  productos: Producto[] = [];
   productosFiltrados: Producto[] = [];
 
   categoriaSeleccionada: string = 'Esquites Original';
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private productsService: ProductsService) {}
 
   ngOnInit() {
+    this.categorias = this.productsService.getCategorias();
     this.route.params.subscribe(params => {
       this.categoriaSeleccionada = params['categoria'] ? decodeURIComponent(params['categoria']) : 'Esquites Original';
-      this.filtrarProductos();
+      this.productosFiltrados = this.productsService.getProductos(this.categoriaSeleccionada); // Mostrar la categoría por defecto
     });
   }
 
   filtrarProductos() {
-    this.productosFiltrados = this.productos.filter(producto => producto.categoria === this.categoriaSeleccionada);
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      this.productosFiltrados = this.productsService.getProductos(this.categoriaSeleccionada);
+    } else {
+      gsap.to('.product-card', {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => {
+          this.productosFiltrados = this.productsService.getProductos(this.categoriaSeleccionada);
+          gsap.fromTo('.product-card', { opacity: 0 }, { opacity: 1, duration: 0.5 });
+        }
+      });
+    }
   }
 
   seleccionarCategoria(categoria: { nombre: string, imagen: string }) {
-    this.categoriaSeleccionada = categoria.nombre;
-    this.filtrarProductos();
+    if (this.categoriaSeleccionada !== categoria.nombre) { // Solo filtrar si la categoría cambia
+      this.categoriaSeleccionada = categoria.nombre;
+      this.filtrarProductos();
+    }
   }
 }
