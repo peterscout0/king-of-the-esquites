@@ -1,13 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
 import { FeatureSectionComponent } from '../components/feature-section/feature-section.component';
 import { MainSectionComponent } from '../components/main-section/main-section.component';
 import { MenuButtonComponent } from '../components/buttons/menu-button/menu-button.component';
-import { SwiperCard } from '../models/swiper-card.model';
 import { ImageSectionComponent } from '../components/image-section/image-section.component';
 import { CarouselSectionComponent } from '../components/carousel-section/carousel-section.component';
 import { SeparatorSectionComponent } from '../components/separator-section/separator-section.component';
-
+import { SwiperCard } from '../models/swiper-card.model';
+import { Router} from '@angular/router';
+import { EsquitesService } from '../services/esquites.service';
 
 
 @Component({
@@ -19,13 +19,17 @@ import { SeparatorSectionComponent } from '../components/separator-section/separ
 })
 export class HomeComponent implements OnInit {
 
-  @Input() esquitesTortrixCards: SwiperCard[] = [];
-  @Input() esquitesDianaCards: SwiperCard[] = [];
-  @Input() esquitesOriginalCards: SwiperCard[] = [];
+  esquitesTortrixCards: SwiperCard[] = [];
+  esquitesDianaCards: SwiperCard[] = [];
+  esquitesOriginalCards: SwiperCard[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private esquitesService: EsquitesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.esquitesTortrixCards = this.esquitesService.getEsquitesTortrixCards();
+    this.esquitesDianaCards = this.esquitesService.getEsquitesDianaCards();
+    this.esquitesOriginalCards = this.esquitesService.getEsquitesOriginalCards();
+  }
 
   navigateToCatalog() {
     this.router.navigate(['/productos']);

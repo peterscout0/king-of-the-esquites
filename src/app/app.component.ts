@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { SwiperCard } from './models/swiper-card.model';
+// import { SwiperCard } from './models/swiper-card.model';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -44,31 +44,5 @@ export class AppComponent {
   constructor(library: FaIconLibrary) {
     library.addIcons(faFacebookF, faInstagram, faTwitter, faTiktok);
   }
-
-  // cards Swiper Esquites
-
-  esquitesOriginalCards: SwiperCard[] = [
-    new SwiperCard('/assets/images/esquites/original-esquite.png', '', 'El Chiquito'),
-    new SwiperCard('/assets/images/esquites/original-esquite2.png', '', 'El Mamado'),
-    new SwiperCard('/assets/images/esquites/lotinacho.png', '', 'LoTinacho'),
-    new SwiperCard('/assets/images/esquites/original-no-picante.png', '', 'El sin Chile'),
-    new SwiperCard('/assets/images/esquites/colocha.png', '', 'La Colocha'),
-  ];
-
-  esquitesTortrixCards: SwiperCard[] = [
-    new SwiperCard('/assets/images/esquites/tortrix/tortrix-detodito2.png', 'Tortrix Classic', 'Patoj@ Chilero'),
-    new SwiperCard('/assets/images/esquites/tortrix/tortrix-barbacoa.png', 'Tortrix Hot', 'Qué calidá'),
-    new SwiperCard('/assets/images/esquites/tortrix/tortrix-detodito3.png', 'Tortrix Hot', 'Chilero esto va'),
-    new SwiperCard('/assets/images/esquites/tortrix/tortrix-jala-chapi.png', 'Tortrix Hot', 'Ahísta ve'),
-    new SwiperCard('/assets/images/esquites/tortrix/tortrix-barbacoa.png', 'Tortrix Hot', 'Ponete las pilas')
-  ];
-
-  esquitesDianaCards: SwiperCard[] = [
-    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-    new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-  ];
 
 }
