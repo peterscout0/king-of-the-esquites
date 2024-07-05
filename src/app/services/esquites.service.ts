@@ -8,8 +8,8 @@ export class EsquitesService {
 
   getEsquitesOriginalCards(): SwiperCard[] {
     return [
-      new SwiperCard('/assets/images/esquites/original-esquite.png', '', 'El Chiquito'),
-      new SwiperCard('/assets/images/esquites/original-esquite2.png', '', 'El Mamado'),
+      new SwiperCard('/assets/images/esquites/original-esquite.png', '', 'El Mamado'),
+      new SwiperCard('/assets/images/esquites/original-esquite2.png', '', 'El Chiquito'),
       new SwiperCard('/assets/images/esquites/lotinacho.png', '', 'LoTinacho'),
       new SwiperCard('/assets/images/esquites/original-no-picante.png', '', 'El sin Chile'),
       new SwiperCard('/assets/images/esquites/colocha.png', '', 'La Colocha'),
@@ -30,10 +30,12 @@ export class EsquitesService {
   getEsquitesDianaCards(): SwiperCard[] {
     return [
       new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('/assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
+      new SwiperCard('/assets/images/esquites/diana/nacho-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
+      new SwiperCard('/assets/images/esquites/diana/jalapeno-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
+      new SwiperCard('/assets/images/esquites/diana/quesitos-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
+      new SwiperCard('/assets/images/esquites/diana/tozteca-original-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
+      new SwiperCard('/assets/images/esquites/diana/tozteca-fire-spots-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
+      new SwiperCard('/assets/images/esquites/diana/tozteca-fire-pops-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
     ];
   }
 }

@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent implements OnInit {
 
-  isLoading = true;
+  isLoading = false;
 
   ngOnInit(): void {
     setTimeout(() => {

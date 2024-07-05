@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, ViewChild, ElementRef, AfterViewInit, OnDestroy, EventEmitter } from '@angular/core';
 import { MenuButtonComponent } from '../buttons/menu-button/menu-button.component';
 import { SwiperSectionComponent } from '../swiper-section/swiper-section.component';
 import { SwiperCard } from '../../models/swiper-card.model';
@@ -37,6 +37,8 @@ export class FeatureSectionComponent implements AfterViewInit, OnDestroy {
   @Input() esquitesDianaCards: SwiperCard[] = [];
   @Input() esquitesTortrixCards: SwiperCard[] = [];
   @Input() esquitesOriginalCards: SwiperCard[] = [];
+
+  @Output() buttonClick = new EventEmitter<void>()
 
   @ViewChild('swiperContainer', { static: false }) swiperContainerEl!: ElementRef<HTMLDivElement>;
   @ViewChild('contentSection', { static: false }) contentSectionEl!: ElementRef<HTMLDivElement>;
@@ -149,5 +151,9 @@ export class FeatureSectionComponent implements AfterViewInit, OnDestroy {
       'color': this.descriptionColor,
       'text-shadow': this.descriptionTextShadow,
     };
+  }
+
+  buttonClicked() {
+    this.buttonClick.emit();
   }
 }

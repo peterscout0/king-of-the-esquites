@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit {
     this.categorias = this.productsService.getCategorias();
     this.route.params.subscribe(params => {
       this.categoriaSeleccionada = params['categoria'] ? decodeURIComponent(params['categoria']) : 'Esquites Original';
-      this.productosFiltrados = this.productsService.getProductos(this.categoriaSeleccionada); // Mostrar la categoría por defecto
+      this.filtrarProductos();
     });
   }
 
@@ -48,7 +48,7 @@ export class ProductsComponent implements OnInit {
   }
 
   seleccionarCategoria(categoria: { nombre: string, imagen: string }) {
-    if (this.categoriaSeleccionada !== categoria.nombre) { // Solo filtrar si la categoría cambia
+    if (this.categoriaSeleccionada !== categoria.nombre) {
       this.categoriaSeleccionada = categoria.nombre;
       this.filtrarProductos();
     }

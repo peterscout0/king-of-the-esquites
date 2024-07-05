@@ -38,6 +38,6 @@
       <h1 class="fw-bold" [ngStyle]="titleStyle">{{ title }}</h1>
       <h2 class="fw-bolder" [ngStyle]="subtitleStyle">{{ subtitle }}</h2>
       <p class="mb-3" [ngStyle]="descriptionStyle">{{ description }}</p>
-      <app-menu-button [menutitle]="buttonTitle" width="220px" height="70px" marginLeft="125px" lineWidth="75px" [ngClass]="{'reverse-button': reverseOrder}"></app-menu-button>
+      <app-menu-button [menutitle]="buttonTitle" width="220px" height="70px" marginLeft="125px" lineWidth="75px" [ngClass]="{'reverse-button': reverseOrder}" (buttonClick)="buttonClicked()"></app-menu-button>
   </div>
 </div>

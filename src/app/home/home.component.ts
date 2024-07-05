@@ -35,6 +35,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/productos']);
   }
 
+  navigateToCategory(category: string) {
+    this.router.navigate([`/productos/${category}`]);
+  }
+
   navigateToConstruction() {
     this.router.navigate(['/eventos']);
   }

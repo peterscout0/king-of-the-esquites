@@ -32,7 +32,7 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
 
