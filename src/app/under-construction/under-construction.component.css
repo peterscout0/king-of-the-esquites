@@ -1,0 +1,17 @@
+.construction-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    background-color: #f8f9fa;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  
+  .construction-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  

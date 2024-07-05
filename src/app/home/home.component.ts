@@ -34,4 +34,8 @@ export class HomeComponent implements OnInit {
   navigateToCatalog() {
     this.router.navigate(['/productos']);
   }
+
+  navigateToConstruction() {
+    this.router.navigate(['/eventos']);
+  }
 }
