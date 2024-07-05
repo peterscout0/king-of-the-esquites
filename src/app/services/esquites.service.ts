@@ -18,11 +18,12 @@ export class EsquitesService {
 
   getEsquitesTortrixCards(): SwiperCard[] {
     return [
-      new SwiperCard('/assets/images/esquites/tortrix/tortrix-detodito2.png', 'Tortrix Classic', 'Patoj@ Chilero'),
       new SwiperCard('/assets/images/esquites/tortrix/tortrix-barbacoa.png', 'Tortrix Hot', 'Qué calidá'),
+      new SwiperCard('/assets/images/esquites/tortrix/tortrix-detodito2.png', 'Tortrix Classic', 'Patoj@ Chilero'),
+      new SwiperCard('/assets/images/esquites/doritos/dorito-rojo1.png', 'Tortrix Hot', 'El Atrevido'),
       new SwiperCard('/assets/images/esquites/tortrix/tortrix-detodito3.png', 'Tortrix Hot', 'Chilero esto va'),
       new SwiperCard('/assets/images/esquites/tortrix/tortrix-jala-chapi.png', 'Tortrix Hot', 'Ahísta ve'),
-      new SwiperCard('/assets/images/esquites/tortrix/tortrix-barbacoa.png', 'Tortrix Hot', 'Ponete las pilas')
+      new SwiperCard('/assets/images/esquites/tortrix/tortrix-barbacoa.png', 'Tortrix Hot', 'Ponete las pilas'),
     ];
   }
 

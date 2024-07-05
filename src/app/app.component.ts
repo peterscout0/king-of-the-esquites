@@ -7,10 +7,11 @@ import { FooterComponent } from './footer/footer.component';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 // import { SwiperCard } from './models/swiper-card.model';
+import { ErrorComponent } from './components/error/error.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HomeComponent, FooterComponent, FontAwesomeModule],
+  imports: [RouterOutlet, HeaderComponent, HomeComponent, FooterComponent, FontAwesomeModule, ErrorComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -35,10 +36,10 @@ export class AppComponent {
   
   
   socialLinks = [
-    { iconPrefix: 'fab', iconName: 'facebook-f', url: 'https://www.facebook.com' },
-    { iconPrefix: 'fab', iconName: 'instagram', url: 'https://www.instagram.com' },
-    { iconPrefix: 'fab', iconName: 'twitter', url: 'https://www.twitter.com' },
-    { iconPrefix: 'fab', iconName: 'tiktok', url: 'https://www.tiktok.com' },
+    { iconPrefix: 'fab', iconName: 'facebook-f', url: 'https://www.facebook.com/profile.php?id=61550868701305' },
+    { iconPrefix: 'fab', iconName: 'instagram', url: 'https://www.instagram.com/king_of_the_esquites/' },
+    { iconPrefix: 'fab', iconName: 'twitter', url: 'https://x.com/KingEsquite' },
+    { iconPrefix: 'fab', iconName: 'tiktok', url: 'https://www.tiktok.com/@king_of_the_esquites' },
     { iconPrefix: 'fab', iconName: 'whatsapp' }
   ];
   
