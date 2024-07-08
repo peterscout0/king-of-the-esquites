@@ -15,9 +15,9 @@ export class ProductsService {
     { nombre: 'Esquites Señorial', imagen: 'assets/images/esquites/senorial/lg-senorial.jpg' },
     // { nombre: 'Postres', imagen: 'assets/images/esquites/desserts/lg-postres.png' },
     { nombre: 'Bebidas', imagen: 'assets/images/drinks/drinks.png' },
+    { nombre: 'Combos', imagen: 'assets/images/combos/combo2.png' },
     { nombre: 'Salsas', imagen: 'assets/images/sauces/lg-sauces.jpg' },
-    // { nombre: 'Combos', imagen: '/assets/images/esquites/tortrix/tortrix-jala-chapi.png' },
-    // { nombre: 'Para Compartir', imagen: '/assets/images/esquites/tortrix/tortrix-jala-chapi.png' }
+    // { nombre: 'Para Compartir', imagen: 'assets/images/esquites/tortrix/tortrix-jala-chapi.png' }
   ];
 
   private productos: Producto[] = [
@@ -74,8 +74,10 @@ export class ProductsService {
     { nombre: 'Michelada', precio: 25, imagen: 'assets/images/drinks/michelada.png', categoria: 'Bebidas' },
 
     // Productos de Combos
-    { nombre: 'Combo Familiar', precio: 150, imagen: 'assets/images/esquites/tortrix/tortrix-jala-chapi.png', categoria: 'Combos' },
-    { nombre: 'Combo Amigos', precio: 100, imagen: 'assets/images/esquites/tortrix/tortrix-detodito3.png', categoria: 'Combos' },
+    { nombre: '¡Te Atreves! Combo 1', precio: 25, imagen: 'assets/images/combos/combo1.png', categoria: 'Combos' },
+    { nombre: 'Compadres Combo 2', precio: 40, imagen: 'assets/images/combos/combo2.png', categoria: 'Combos' },
+    { nombre: 'Los Paisanos Combo 3', precio: 45, imagen: 'assets/images/combos/combo3.png', categoria: 'Combos' },
+    { nombre: 'La Hambreada Combo 4', precio: 40, imagen: 'assets/images/combos/combo4.png', categoria: 'Combos' },
 
     // Productos de Para Compartir
     { nombre: 'Para Compartir Grande', precio: 120, imagen: 'assets/images/esquites/tortrix/tortrix-detodito2.png', categoria: 'Para Compartir' },
