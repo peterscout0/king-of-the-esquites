@@ -13,9 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/king-of-the-esquites",
             "index": "src/index.html",
-            "baseHref": "/king-of-the-esquites/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"

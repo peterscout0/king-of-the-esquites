@@ -6,9 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "predeploy": "ng build --output-path=docs --base-href=/king-of-the-esquites/",
-    "deploy": "gh-pages -d docs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -43,7 +41,6 @@
     "@angular/compiler-cli": "^18.0.0",
     "@types/jasmine": "~5.1.0",
     "@types/swiper": "^6.0.0",
-    "gh-pages": "^6.1.1",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
