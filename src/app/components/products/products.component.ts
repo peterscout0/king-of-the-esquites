@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router'
 import { ProductsService } from '../../services/products.service';
 import { Producto, Categoria } from '../../models/producto.model';
@@ -8,10 +7,8 @@ import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-products',
-  standalone: true,
-  imports: [CommonModule  ],
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
 

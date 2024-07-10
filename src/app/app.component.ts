@@ -1,19 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-// import { SwiperCard } from './models/swiper-card.model';
-import { ErrorComponent } from './components/error/error.component';
-import { LoadingComponent } from './loading/loading.component'; 
-import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, HomeComponent, FooterComponent, FontAwesomeModule, ErrorComponent, LoadingComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

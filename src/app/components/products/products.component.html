@@ -3,7 +3,7 @@
     <div class="category-item" *ngFor="let categoria of categorias" 
         (click)="seleccionarCategoria(categoria)" 
         [ngClass]="{'active': categoriaSeleccionada === categoria.nombre}">
-        <img [src]="categoria.imagen" class="category-image" alt="{{ categoria.nombre }}">
+        <img lazyLoad [src]="categoria.imagen" class="category-image" alt="{{ categoria.nombre }}">
         <div class="category-name">{{ categoria.nombre }}</div>
     </div>
   </div>
@@ -12,7 +12,7 @@
     <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4" *ngFor="let producto of productosFiltrados">
       <div class="card shadow-sm product-card">
         <div class="card-img-container">
-          <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
+          <img lazyLoad [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
           <!-- <div class="card-hover-overlay" (click)="irAWhatsApp(producto.numeroWhatsApp ?? '0000000000')"> -->
           <div class="card-hover-overlay" (click)="irAWhatsApp('1234567890')">
             <span>Chat de Whatsapp</span>

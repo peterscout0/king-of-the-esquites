@@ -1,12 +1,8 @@
 import { Component, Input, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgFor } from '@angular/common';
 import { gsap } from 'gsap'; 
 
 @Component({
   selector: 'app-footer',
-  standalone: true,
-  imports: [FontAwesomeModule, NgFor],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

@@ -1,10 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-separator-section',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './separator-section.component.html',
   styleUrls: ['./separator-section.component.css']
 })

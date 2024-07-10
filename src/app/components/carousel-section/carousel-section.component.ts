@@ -1,13 +1,11 @@
-import { Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-carousel-section',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './carousel-section.component.html',
   styleUrls: ['./carousel-section.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselSectionComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() images: { src: string, alt: string }[] = [];
@@ -30,8 +28,8 @@ export class CarouselSectionComponent implements OnInit, AfterViewInit, OnDestro
   currentIndex: number = 0;
   isMobile: boolean = false;
   observer: IntersectionObserver | null = null;
-  isAnimatingImage: boolean = false;
-  isAnimatingTitle: boolean = false;
+  hasAnimatedImage: boolean = false;
+  hasAnimatedTitle: boolean = false;
 
   ngOnInit() {
     this.isMobile = window.innerWidth <= 768;
@@ -71,10 +69,10 @@ export class CarouselSectionComponent implements OnInit, AfterViewInit, OnDestro
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (entry.target === this.imageContainerEl.nativeElement && !this.isAnimatingImage) {
+          if (entry.target === this.imageContainerEl.nativeElement && !this.hasAnimatedImage) {
             this.animateImageContainer();
           }
-          if (entry.target === this.sectionTitleEl.nativeElement && !this.isAnimatingTitle) {
+          if (entry.target === this.sectionTitleEl.nativeElement && !this.hasAnimatedTitle) {
             this.animateSectionTitle();
           }
         }
@@ -90,27 +88,31 @@ export class CarouselSectionComponent implements OnInit, AfterViewInit, OnDestro
   }
 
   animateImageContainer() {
-    this.isAnimatingImage = true;
+    this.hasAnimatedImage = true; // Set the flag to true to prevent re-animation
     gsap.from(this.imageContainerEl.nativeElement, {
       duration: 1.5,
       opacity: 0,
       y: 50,
       ease: 'power2.out',
       onComplete: () => { 
-        this.isAnimatingImage = false; // Reset the flag when animation completes
+        if (this.observer) {
+          this.observer.unobserve(this.imageContainerEl.nativeElement); // Disconnect observer
+        }
       }
     });
   }
 
   animateSectionTitle() {
-    this.isAnimatingTitle = true;
+    this.hasAnimatedTitle = true; // Set the flag to true to prevent re-animation
     gsap.from(this.sectionTitleEl.nativeElement, {
       duration: 1.5,
       opacity: 0,
       y: 50,
       ease: 'power2.out',
       onComplete: () => { 
-        this.isAnimatingTitle = false; // Reset the flag when animation completes
+        if (this.observer) {
+          this.observer.unobserve(this.sectionTitleEl.nativeElement); // Disconnect observer
+        }
       }
     });
   }

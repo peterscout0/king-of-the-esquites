@@ -1,15 +1,9 @@
 import { Component, Input, Output, ViewChild, ElementRef, AfterViewInit, OnDestroy, EventEmitter } from '@angular/core';
-import { MenuButtonComponent } from '../buttons/menu-button/menu-button.component';
-import { SwiperSectionComponent } from '../swiper-section/swiper-section.component';
 import { SwiperCard } from '../../models/swiper-card.model';
-import { CommonModule } from '@angular/common';
-import { SharedModuleModule } from '../../shared-module.module';
 import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-feature-section',
-  standalone: true,
-  imports: [CommonModule, MenuButtonComponent, SwiperSectionComponent, SharedModuleModule],
   templateUrl: './feature-section.component.html',
   styleUrl: './feature-section.component.css',
 })
@@ -45,8 +39,8 @@ export class FeatureSectionComponent implements AfterViewInit, OnDestroy {
 
   isMobile: boolean = false;
   observer: IntersectionObserver | null = null;
-  isAnimatingSwiper: boolean = false;
-  isAnimatingContent: boolean = false;
+  hasAnimatedSwiper: boolean = false;
+  hasAnimatedContent: boolean = false;
 
   ngAfterViewInit() {
     this.isMobile = window.innerWidth <= 768;
@@ -76,10 +70,10 @@ export class FeatureSectionComponent implements AfterViewInit, OnDestroy {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (entry.target === this.swiperContainerEl.nativeElement && !this.isAnimatingSwiper) {
+          if (entry.target === this.swiperContainerEl.nativeElement && !this.hasAnimatedSwiper) {
             this.animateSwiperContainer();
           }
-          if (entry.target === this.contentSectionEl.nativeElement && !this.isAnimatingContent) {
+          if (entry.target === this.contentSectionEl.nativeElement && !this.hasAnimatedContent) {
             this.animateContentSection();
           }
         }
@@ -95,27 +89,31 @@ export class FeatureSectionComponent implements AfterViewInit, OnDestroy {
   }
 
   animateSwiperContainer() {
-    this.isAnimatingSwiper = true;
+    this.hasAnimatedSwiper = true; // Set the flag to true to prevent re-animation
     gsap.from(this.swiperContainerEl.nativeElement, {
       duration: 1.5,
       opacity: 0,
       x: -100,
       ease: 'power2.out',
-      onComplete: () => { 
-        this.isAnimatingSwiper = false; // Reset the flag when animation completes
+      onComplete: () => {
+        if (this.observer) {
+          this.observer.unobserve(this.swiperContainerEl.nativeElement); // Disconnect observer
+        }
       }
     });
   }
 
   animateContentSection() {
-    this.isAnimatingContent = true;
+    this.hasAnimatedContent = true; // Set the flag to true to prevent re-animation
     gsap.from(this.contentSectionEl.nativeElement, {
       duration: 1.5,
       opacity: 0,
       x: 100,
       ease: 'power2.out',
-      onComplete: () => { 
-        this.isAnimatingContent = false; // Reset the flag when animation completes
+      onComplete: () => {
+        if (this.observer) {
+          this.observer.unobserve(this.contentSectionEl.nativeElement); // Disconnect observer
+        }
       }
     });
   }

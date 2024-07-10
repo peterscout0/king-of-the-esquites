@@ -4,7 +4,7 @@
   <div class="carousel-container">
     <div class="carousel-content" [style.transform]="'translateX(-' + currentIndex * 135 + 'px)'">
       <div *ngFor="let card of cards" class="carousel-card card" [ngStyle]="{'background-color': cardBackgroundColor}">
-        <img [src]="card.imageUrl" [alt]="card.title">
+        <img lazyLoad [src]="card.imageUrl" [alt]="card.title">
         <div class="card-overlay">{{ card.hoverText }}</div>
       </div>
     </div>

@@ -2,8 +2,6 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-error',
-  standalone: true,
-  imports: [],
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.css']
 })

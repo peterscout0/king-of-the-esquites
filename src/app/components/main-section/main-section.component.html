@@ -2,7 +2,7 @@
   <div class="background-overlay"></div>
   <div class="content">
     <div class="image-wrapper" *ngIf="imageUrl">
-      <img #image [src]="imageUrl" alt="" class="center-image" [ngStyle]="imageStyle">
+      <img lazyLoad #image [src]="imageUrl" alt="" class="center-image" [ngStyle]="imageStyle">
     </div>
     <div class="text-content">
       <h2 #subtitle class="fw-bolder" [ngStyle]="subtitleStyle">{{ subtitle }}</h2>

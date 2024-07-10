@@ -1,13 +1,9 @@
 import { Component, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewInit, OnChanges, SimpleChanges, OnDestroy} from '@angular/core';
-import { MenuButtonComponent } from '../buttons/menu-button/menu-button.component';
-import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
 
 
 @Component({
   selector: 'app-main-section',
-  standalone: true,
-  imports: [CommonModule, MenuButtonComponent],
   templateUrl: './main-section.component.html',
   styleUrls: ['./main-section.component.css'],
 })
@@ -40,6 +36,7 @@ export class MainSectionComponent implements AfterViewInit, OnChanges, OnDestroy
   observer: IntersectionObserver | null = null;
   isAnimating: boolean = false;
   isMobile: boolean = false;
+  hasAnimated: boolean = false; // Para saber si la animación ya se ejecutó
 
   ngAfterViewInit() {
     this.isMobile = window.innerWidth <= 768;
@@ -85,7 +82,7 @@ export class MainSectionComponent implements AfterViewInit, OnChanges, OnDestroy
 
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && !this.isAnimating) {
+        if (entry.isIntersecting && !this.isAnimating && !this.hasAnimated) {
           this.resetStyles();
           this.animateContent();
         }
@@ -109,7 +106,11 @@ export class MainSectionComponent implements AfterViewInit, OnChanges, OnDestroy
 
     const timeline = gsap.timeline({
       onComplete: () => { 
-        this.isAnimating = false; // Reset the flag when animation completes
+        this.isAnimating = false;
+        this.hasAnimated = true; // Set the flag to true once the animation completes
+        if (this.observer && this.mainSectionEl) {
+          this.observer.unobserve(this.mainSectionEl.nativeElement); // Disconnect the observer
+        }
       }
     });
 

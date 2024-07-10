@@ -1,7 +1,7 @@
 <main>
-  <app-header [showLogo]="true"></app-header>
+  <app-header [showLogo]="true" *ngIf="!isLoading"></app-header>
   <app-loading *ngIf="isLoading"></app-loading>
   <router-outlet *ngIf="!isLoading"></router-outlet>
   <!-- <app-home [esquitesTortrixCards]="esquitesTortrixCards" [esquitesDianaCards]="esquitesDianaCards" [esquitesOriginalCards]="esquitesOriginalCards"></app-home> -->
-  <app-footer [addresses]="addresses" [contacts]="contacts" [operatingHours]="operatingHours" [socialLinks]="socialLinks"  [whatsappNumber]="whatsappNumber"></app-footer>
+  <app-footer *ngIf="!isLoading" [addresses]="addresses" [contacts]="contacts" [operatingHours]="operatingHours" [socialLinks]="socialLinks"  [whatsappNumber]="whatsappNumber"></app-footer>
 </main>

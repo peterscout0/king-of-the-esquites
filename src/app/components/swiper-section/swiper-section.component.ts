@@ -1,12 +1,8 @@
 import { Component, Input} from '@angular/core';
 import { SwiperCard } from '../../models/swiper-card.model';
-import { SharedModuleModule } from '../../shared-module.module';
-
 
 @Component({
   selector: 'app-swiper-section',
-  standalone: true,
-  imports: [SharedModuleModule],
   templateUrl: './swiper-section.component.html',
   styleUrls: ['./swiper-section.component.css']
 })
