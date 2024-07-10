@@ -1,10 +1,11 @@
-import { Component, Input, AfterViewInit, Renderer2, HostListener, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, AfterViewInit, Renderer2, HostListener, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements AfterViewInit {
   @Input() showLogo: boolean = true;

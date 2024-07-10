@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewInit, OnChanges, SimpleChanges, OnDestroy} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewInit, OnChanges, SimpleChanges, OnDestroy} from '@angular/core';
 import { gsap } from 'gsap';
 
 
@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
   selector: 'app-main-section',
   templateUrl: './main-section.component.html',
   styleUrls: ['./main-section.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainSectionComponent implements AfterViewInit, OnChanges, OnDestroy {
   @Input() title: string = 'HELADO';

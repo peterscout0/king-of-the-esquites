@@ -1,4 +1,4 @@
-import { Component, Input, Output, ViewChild, ElementRef, AfterViewInit, OnDestroy, EventEmitter } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, Output, ViewChild, ElementRef, AfterViewInit, OnDestroy, EventEmitter } from '@angular/core';
 import { SwiperCard } from '../../models/swiper-card.model';
 import { gsap } from 'gsap';
 
@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
   selector: 'app-feature-section',
   templateUrl: './feature-section.component.html',
   styleUrl: './feature-section.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeatureSectionComponent implements AfterViewInit, OnDestroy {
   @Input() title!: string;

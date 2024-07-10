@@ -1,10 +1,11 @@
-import { Component, Input, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { gsap } from 'gsap'; 
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrl: './footer.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent implements AfterViewInit {
   @Input() addresses!: any[];

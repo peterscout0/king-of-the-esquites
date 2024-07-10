@@ -1,9 +1,10 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu-button',
   templateUrl: './menu-button.component.html',
-  styleUrl: './menu-button.component.css'
+  styleUrl: './menu-button.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuButtonComponent {
   @Input() menutitle: string = "Menú";

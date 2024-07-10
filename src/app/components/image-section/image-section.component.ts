@@ -1,10 +1,11 @@
-  import { Component, Input, ViewChild, ElementRef, AfterViewInit, OnDestroy  } from '@angular/core';
+  import { ChangeDetectionStrategy, Component, Input, ViewChild, ElementRef, AfterViewInit, OnDestroy  } from '@angular/core';
   import { gsap } from 'gsap';
 
   @Component({
     selector: 'app-image-section',
     templateUrl: './image-section.component.html',
     styleUrls: ['./image-section.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
   })
   export class ImageSectionComponent implements AfterViewInit, OnDestroy {
     @Input() images: { src: string, alt: string }[] = [];

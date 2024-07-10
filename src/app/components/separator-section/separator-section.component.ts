@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 @Component({
   selector: 'app-separator-section',
   templateUrl: './separator-section.component.html',
-  styleUrls: ['./separator-section.component.css']
+  styleUrls: ['./separator-section.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SeparatorSectionComponent {
   @Input() height: string = '150px';

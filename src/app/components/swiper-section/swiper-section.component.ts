@@ -1,10 +1,11 @@
-import { Component, Input} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import { SwiperCard } from '../../models/swiper-card.model';
 
 @Component({
   selector: 'app-swiper-section',
   templateUrl: './swiper-section.component.html',
-  styleUrls: ['./swiper-section.component.css']
+  styleUrls: ['./swiper-section.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SwiperSectionComponent {
   @Input() title: string = '';

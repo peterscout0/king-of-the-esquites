@@ -1,11 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-carousel-section',
   templateUrl: './carousel-section.component.html',
   styleUrls: ['./carousel-section.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselSectionComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() images: { src: string, alt: string }[] = [];
