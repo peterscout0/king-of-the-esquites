@@ -29,13 +29,13 @@ export class EsquitesService {
 
   getEsquitesDianaCards(): SwiperCard[] {
     return [
-      new SwiperCard('assets/images/esquites/diana/tozteca.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('assets/images/esquites/diana/nacho-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('assets/images/esquites/diana/jalapeno-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('assets/images/esquites/diana/quesitos-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('assets/images/esquites/diana/tozteca-original-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('assets/images/esquites/diana/tozteca-fire-spots-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
-      new SwiperCard('assets/images/esquites/diana/tozteca-fire-pops-diana.png', 'Diana Delight', 'Más sobre Diana Delight'),
+      new SwiperCard('assets/images/esquites/diana/tozteca.png', 'Diana Delight', '¡Tozteca Divertida!'),
+      new SwiperCard('assets/images/esquites/diana/nacho-diana.png', 'Diana Delight', 'Nachos'),
+      new SwiperCard('assets/images/esquites/diana/jalapeno-diana.png', 'Diana Delight', 'Jalapeños'),
+      new SwiperCard('assets/images/esquites/diana/quesitos-diana.png', 'Diana Delight', 'Quesosos'),
+      new SwiperCard('assets/images/esquites/diana/tozteca-original-diana.png', 'Diana Delight', 'El original'),
+      new SwiperCard('assets/images/esquites/diana/tozteca-fire-spots-diana.png', 'Diana Delight', 'Al Rojo Vivo'),
+      new SwiperCard('assets/images/esquites/diana/tozteca-fire-pops-diana.png', 'Diana Delight', '¡Esto si es bueno!'),
     ];
   }
 }

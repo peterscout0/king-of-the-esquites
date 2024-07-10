@@ -12,7 +12,7 @@ export class ProductsService {
     { nombre: 'Esquites Tortrix', imagen: 'assets/images/esquites/tortrix/lg-tortrix.png' },
     { nombre: 'Esquites Doritos', imagen: 'assets/images/esquites/doritos/lg-doritos.png' },
     { nombre: 'Esquites Diana', imagen: 'assets/images/esquites/diana/lg-diana.png' },
-    { nombre: 'Esquites Señorial', imagen: 'assets/images/esquites/senorial/lg-senorial.jpg' },
+    // { nombre: 'Esquites Señorial', imagen: 'assets/images/esquites/senorial/lg-senorial.jpg' },
     // { nombre: 'Postres', imagen: 'assets/images/esquites/desserts/lg-postres.png' },
     { nombre: 'Bebidas', imagen: 'assets/images/drinks/drinks.png' },
     { nombre: 'Combos', imagen: 'assets/images/combos/combo2.png' },
@@ -24,8 +24,8 @@ export class ProductsService {
     { nombre: 'El Mamado', precio: 25, imagen: 'assets/images/esquites/original-esquite.png', categoria: 'Esquites Original' },
     { nombre: 'El Chiquito', precio: 20, imagen: 'assets/images/esquites/original-esquite2.png', categoria: 'Esquites Original' },
     { nombre: 'LotiNacho', precio: 40, imagen: 'assets/images/esquites/lotinacho.png', categoria: 'Esquites Original' },
-    { nombre: 'El Sin Chile', precio: 25, imagen: 'assets/images/esquites/original-no-picante.png', categoria: 'Esquites Original' },
-    { nombre: 'El Macarroni', precio: 30, imagen: 'assets/images/esquites/original-no-picante.png', categoria: 'Esquites Original', textoHover: 'Pedir', numeroWhatsApp: '1234567890', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
+    { nombre: 'El Sin Chile', precio: 25, imagen: 'assets/images/esquites/macarroni.png', categoria: 'Esquites Original' },
+    { nombre: 'El Macarroni', precio: 30, imagen: 'assets/images/esquites/macarroni.png', categoria: 'Esquites Original', textoHover: 'Pedir', numeroWhatsApp: '1234567890', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
     { nombre: 'La Colocha', precio: 35, imagen: 'assets/images/esquites/colocha.png', categoria: 'Esquites Original', textoHover: 'Pedir', numeroWhatsApp: '1234567890' },
 
     // Productos de Esquites Tortrix
@@ -66,12 +66,18 @@ export class ProductsService {
     // { nombre: 'Salsa Verde', precio: 25, imagen: 'assets/images/sauces/verde.png', categoria: 'Salsas' },
 
     // Productos de Bebidas
-    { nombre: 'Nuclear', precio: 15, imagen: 'assets/images/drinks/nuclear1.png', categoria: 'Bebidas' },
-    { nombre: 'Plutonio', precio: 15, imagen: 'assets/images/drinks/plutonio.png', categoria: 'Bebidas' },
-    { nombre: 'Mojito Sin Alcohol', precio: 15, imagen: 'assets/images/drinks/lemon.png', categoria: 'Bebidas' },
-    { nombre: 'Tropical', precio: 15, imagen: 'assets/images/drinks/tropical.png', categoria: 'Bebidas' },
+    { nombre: 'Nuclear (Blue, Manzana)', precio: 15, imagen: 'assets/images/drinks/nuclear1.png', categoria: 'Bebidas' },
+    { nombre: 'Plutonio (Manzana)', precio: 15, imagen: 'assets/images/drinks/plutonio.png', categoria: 'Bebidas' },
+    { nombre: 'Mojito Sin Alcohol', precio: 15, imagen: 'assets/images/drinks/lemon.png', categoria: 'Bebidas', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
+    { nombre: 'Tropical (Sandía, Melón)', precio: 15, imagen: 'assets/images/drinks/tropical.png', categoria: 'Bebidas' },
     { nombre: 'Mineral Preparada', precio: 20, imagen: 'assets/images/drinks/michelada.png', categoria: 'Bebidas' },
-    { nombre: 'Michelada', precio: 25, imagen: 'assets/images/drinks/michelada.png', categoria: 'Bebidas' },
+    { nombre: 'Michelada (Gallo)', precio: 25, imagen: 'assets/images/drinks/michelada.png', categoria: 'Bebidas' },
+    { nombre: 'Coca-Cola', precio: 5, imagen: 'assets/images/drinks/coca.png', categoria: 'Bebidas' },
+    { nombre: 'Coca-Cola Zero', precio: 5, imagen: 'assets/images/drinks/coca-zero.png', categoria: 'Bebidas' },
+    { nombre: 'Seven-Up', precio: 5, imagen: 'assets/images/drinks/seven.png', categoria: 'Bebidas' },
+    { nombre: 'Sprite', precio: 5, imagen: 'assets/images/drinks/sprite.png', categoria: 'Bebidas' },
+    { nombre: 'Fanta', precio: 5, imagen: 'assets/images/drinks/fanta.png', categoria: 'Bebidas' },
+    { nombre: 'Botella con Agua', precio: 5, imagen: 'assets/images/drinks/agua.png', categoria: 'Bebidas' },
 
     // Productos de Combos
     { nombre: '¡Te Atreves! Combo 1', precio: 25, imagen: 'assets/images/combos/combo1.png', categoria: 'Combos' },
