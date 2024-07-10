@@ -11,7 +11,7 @@ export class EsquitesService {
       new SwiperCard('assets/images/esquites/original-esquite.png', '', 'El Mamado'),
       new SwiperCard('assets/images/esquites/original-esquite2.png', '', 'El Chiquito'),
       new SwiperCard('assets/images/esquites/lotinacho.png', '', 'LoTinacho'),
-      new SwiperCard('assets/images/esquites/original-no-picante.png', '', 'El sin Chile'),
+      new SwiperCard('assets/images/esquites/macarroni.png', '', 'El sin Chile'),
       new SwiperCard('assets/images/esquites/colocha.png', '', 'La Colocha'),
     ];
   }

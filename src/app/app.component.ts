@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faFacebookF, faInstagram, faTwitter, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faXTwitter, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
   socialLinks = [
     { iconPrefix: 'fab', iconName: 'facebook-f', url: 'https://www.facebook.com/profile.php?id=61550868701305' },
     { iconPrefix: 'fab', iconName: 'instagram', url: 'https://www.instagram.com/king_of_the_esquites/' },
-    { iconPrefix: 'fab', iconName: 'twitter', url: 'https://x.com/KingEsquite' },
+    { iconPrefix: 'fab', iconName: 'x-twitter', url: 'https://x.com/KingEsquite' },
     { iconPrefix: 'fab', iconName: 'tiktok', url: 'https://www.tiktok.com/@king_of_the_esquites' },
     { iconPrefix: 'fab', iconName: 'whatsapp' }
   ];
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
   whatsappNumber = '12344567';
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faFacebookF, faInstagram, faTwitter, faTiktok, faWhatsapp);
+    library.addIcons(faFacebookF, faInstagram, faXTwitter, faTiktok, faWhatsapp);
   }
 
 }
