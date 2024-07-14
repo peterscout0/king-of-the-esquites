@@ -25,8 +25,8 @@ export class AppComponent implements OnInit {
   ];
   
   contacts = [
-    { info: "Whatsapp", phone: "1234-4567" },
-    { info: "Servicio a Domicilio", phone: "1234-4567" }
+    { info: "Whatsapp", phone: "0000-0000" },
+    { info: "Servicio a Domicilio", phone: "0000-0000" }
   ];
   
   operatingHours = [
@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
     { iconPrefix: 'fab', iconName: 'whatsapp' }
   ];
   
-  whatsappNumber = '12344567';
+  whatsappNumber = '';
 
   constructor(library: FaIconLibrary) {
     library.addIcons(faFacebookF, faInstagram, faXTwitter, faTiktok, faWhatsapp);

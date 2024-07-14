@@ -12,7 +12,8 @@ export class ProductsService {
     { nombre: 'Esquites Tortrix', imagen: 'assets/images/esquites/tortrix/lg-tortrix.png' },
     { nombre: 'Esquites Doritos', imagen: 'assets/images/esquites/doritos/lg-doritos.png' },
     { nombre: 'Esquites Diana', imagen: 'assets/images/esquites/diana/lg-diana.png' },
-    // { nombre: 'Esquites Señorial', imagen: 'assets/images/esquites/senorial/lg-senorial.jpg' },
+    { nombre: 'Esquites Señorial', imagen: 'assets/images/esquites/senorial/lg-senorial.jpg' },
+    { nombre: 'Perros Calientes', imagen: 'assets/images/hot-dogs/menu-hot-dog.jpg' },
     // { nombre: 'Postres', imagen: 'assets/images/esquites/desserts/lg-postres.png' },
     { nombre: 'Bebidas', imagen: 'assets/images/drinks/drinks.png' },
     { nombre: 'Combos', imagen: 'assets/images/combos/combo2.png' },
@@ -25,8 +26,8 @@ export class ProductsService {
     { nombre: 'El Chiquito', precio: 20, imagen: 'assets/images/esquites/original-esquite2.png', categoria: 'Esquites Original' },
     { nombre: 'LotiNacho', precio: 40, imagen: 'assets/images/esquites/lotinacho.png', categoria: 'Esquites Original' },
     { nombre: 'El Sin Chile', precio: 25, imagen: 'assets/images/esquites/macarroni.png', categoria: 'Esquites Original' },
-    { nombre: 'El Macarroni', precio: 30, imagen: 'assets/images/esquites/macarroni.png', categoria: 'Esquites Original', textoHover: 'Pedir', numeroWhatsApp: '1234567890', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
-    { nombre: 'La Colocha', precio: 35, imagen: 'assets/images/esquites/colocha.png', categoria: 'Esquites Original', textoHover: 'Pedir', numeroWhatsApp: '1234567890' },
+    { nombre: 'El Macarroni', precio: 30, imagen: 'assets/images/esquites/macarroni.png', categoria: 'Esquites Original', textoHover: 'Pedir', numeroWhatsApp: '', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
+    { nombre: 'La Colocha', precio: 35, imagen: 'assets/images/esquites/colocha.png', categoria: 'Esquites Original', textoHover: 'Pedir', numeroWhatsApp: '' },
 
     // Productos de Esquites Tortrix
     { nombre: 'Esquite Barbacoa', precio: 20, imagen: 'assets/images/esquites/tortrix/tortrix-barbacoa-product.png', categoria: 'Esquites Tortrix' },
@@ -48,18 +49,22 @@ export class ProductsService {
     { nombre: 'Esquite Diana Nacho', precio: 20, imagen: 'assets/images/esquites/diana/nacho-diana.png', categoria: 'Esquites Diana' },
     { nombre: 'Esquite Diana Jalapeño', precio: 20, imagen: 'assets/images/esquites/diana/jalapeno-diana.png', categoria: 'Esquites Diana' },
     { nombre: 'Esquite Diana Quesitos', precio: 20, imagen: 'assets/images/esquites/diana/quesitos-diana.png', categoria: 'Esquites Diana' },
+    { nombre: 'Esquite Diana Mix', precio: 20, imagen: 'assets/images/esquites/diana/diana-mix-picante.png', categoria: 'Esquites Diana' },
     { nombre: 'Esquite Tozteca Spots', precio: 25, imagen: 'assets/images/esquites/diana/tozteca-fire-spots-diana.png', categoria: 'Esquites Diana' },
     { nombre: 'Esquite Tozteca Pops', precio: 25, imagen: 'assets/images/esquites/diana/tozteca-fire-pops-diana.png', categoria: 'Esquites Diana' },
     { nombre: 'Esquite Tozteca Original', precio: 25, imagen: 'assets/images/esquites/diana/tozteca-original-diana.png', categoria: 'Esquites Diana' },
 
     // Productos de Esquites Señorial
-    { nombre: 'Esquite Señorial Original', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-original-product.png', categoria: 'Esquites Señorial' },
-    { nombre: 'Esquite Señorial Aritos', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-cebollitas-product.png', categoria: 'Esquites Señorial' },
-    { nombre: 'Esquite Chicharrón', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-chicharron-bb-product.png', categoria: 'Esquites Señorial' },
-    { nombre: 'Esquite Señorial Llama', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-llama-product.png', categoria: 'Esquites Señorial' },
-    { nombre: 'Esquite Señorial Bolitas', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-bolitas-product.png', categoria: 'Esquites Señorial' },
-    { nombre: 'Esquite Mix Quesifrito', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-mix-quesifrito-product.png', categoria: 'Esquites Señorial' },
-    { nombre: 'Esquite Mix Aritos', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-mix-aritos-product.png', categoria: 'Esquites Señorial' },
+    // { nombre: 'Esquite Señorial Original', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-original-product.png', categoria: 'Esquites Señorial' },
+    // { nombre: 'Esquite Señorial Aritos', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-cebollitas-product.png', categoria: 'Esquites Señorial' },
+    // { nombre: 'Esquite Chicharrón', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-chicharron-bb-product.png', categoria: 'Esquites Señorial' },
+    { nombre: 'Esquite Señorial Llama', precio: 20, imagen: 'assets/images/esquites/senorial/senorial-llama-product.png', categoria: 'Esquites Señorial', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg'  },
+    // { nombre: 'Esquite Señorial Bolitas', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-bolitas-product.png', categoria: 'Esquites Señorial' },
+    // { nombre: 'Esquite Mix Quesifrito', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-mix-quesifrito-product.png', categoria: 'Esquites Señorial' },
+    // { nombre: 'Esquite Mix Aritos', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-mix-aritos-product.png', categoria: 'Esquites Señorial' },
+    
+    
+    { nombre: 'Esquitón', precio: 30, imagen: 'assets/images/hot-dogs/hot-dog-esquite.png', categoria: 'Perros Calientes' },
 
     // Productos de Salsas
     { nombre: 'Salsa Chipotle (La Mary)', precio: 0, imagen: 'assets/images/sauces/chipotle-sauce.png', categoria: 'Salsas' },
@@ -84,10 +89,11 @@ export class ProductsService {
     { nombre: 'Compadres Combo 2', precio: 40, imagen: 'assets/images/combos/combo2.png', categoria: 'Combos' },
     { nombre: 'Los Paisanos Combo 3', precio: 45, imagen: 'assets/images/combos/combo3.png', categoria: 'Combos' },
     { nombre: 'La Hambreada Combo 4', precio: 40, imagen: 'assets/images/combos/combo4.png', categoria: 'Combos' },
+    { nombre: 'Los Perros', precio: 40, imagen: 'assets/images/combos/combo5.png', categoria: 'Combos', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
 
     // Productos de Para Compartir
-    { nombre: 'Para Compartir Grande', precio: 120, imagen: 'assets/images/esquites/tortrix/tortrix-detodito2.png', categoria: 'Para Compartir' },
-    { nombre: 'Para Compartir Pequeño', precio: 80, imagen: 'assets/images/esquites/tortrix/tortrix-barbacoa.png', categoria: 'Para Compartir' }
+    // { nombre: 'Para Compartir Grande', precio: 120, imagen: 'assets/images/esquites/tortrix/tortrix-detodito2.png', categoria: 'Para Compartir' },
+    // { nombre: 'Para Compartir Pequeño', precio: 80, imagen: 'assets/images/esquites/tortrix/tortrix-barbacoa.png', categoria: 'Para Compartir' }
   ];
   
 
