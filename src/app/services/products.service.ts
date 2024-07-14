@@ -49,9 +49,9 @@ export class ProductsService {
     { nombre: 'Esquite Diana Nacho', precio: 20, imagen: 'assets/images/esquites/diana/nacho-diana.png', categoria: 'Esquites Diana' },
     { nombre: 'Esquite Diana Jalapeño', precio: 20, imagen: 'assets/images/esquites/diana/jalapeno-diana.png', categoria: 'Esquites Diana' },
     { nombre: 'Esquite Diana Quesitos', precio: 20, imagen: 'assets/images/esquites/diana/quesitos-diana.png', categoria: 'Esquites Diana' },
-    { nombre: 'Esquite Diana Mix', precio: 20, imagen: 'assets/images/esquites/diana/diana-mix-picante.png', categoria: 'Esquites Diana' },
-    { nombre: 'Esquite Tozteca Spots', precio: 25, imagen: 'assets/images/esquites/diana/tozteca-fire-spots-diana.png', categoria: 'Esquites Diana' },
-    { nombre: 'Esquite Tozteca Pops', precio: 25, imagen: 'assets/images/esquites/diana/tozteca-fire-pops-diana.png', categoria: 'Esquites Diana' },
+    { nombre: 'Esquite Diana Mix', precio: 20, imagen: 'assets/images/esquites/diana/diana-mix-picante.png', categoria: 'Esquites Diana', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
+    { nombre: 'Esquite Tozteca Spots', precio: 25, imagen: 'assets/images/esquites/diana/tozteca-fire-spots-diana.png', categoria: 'Esquites Diana', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
+    { nombre: 'Esquite Tozteca Pops', precio: 25, imagen: 'assets/images/esquites/diana/tozteca-fire-pops-diana.png', categoria: 'Esquites Diana', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
     { nombre: 'Esquite Tozteca Original', precio: 25, imagen: 'assets/images/esquites/diana/tozteca-original-diana.png', categoria: 'Esquites Diana' },
 
     // Productos de Esquites Señorial
