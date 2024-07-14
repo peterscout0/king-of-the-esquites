@@ -64,7 +64,7 @@ export class ProductsService {
     // { nombre: 'Esquite Mix Aritos', precio: 0, imagen: 'assets/images/esquites/senorial/senorial-mix-aritos-product.png', categoria: 'Esquites Señorial' },
     
     
-    { nombre: 'Esquitón', precio: 30, imagen: 'assets/images/hot-dogs/hot-dog-esquite.png', categoria: 'Perros Calientes' },
+    { nombre: 'Esquitón', precio: 30, imagen: 'assets/images/hot-dogs/hot-dog-esquite.png', categoria: 'Perros Calientes', esNuevo: true, mensajeNuevo: 'Nuevo', colorFondoNuevo: '#b41515', rotacionNuevo: '315deg' },
 
     // Productos de Salsas
     { nombre: 'Salsa Chipotle (La Mary)', precio: 0, imagen: 'assets/images/sauces/chipotle-sauce.png', categoria: 'Salsas' },
