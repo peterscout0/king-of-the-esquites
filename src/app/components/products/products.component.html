@@ -14,8 +14,8 @@
         <div class="card-img-container">
           <img lazyLoad [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
           <!-- <div class="card-hover-overlay" (click)="irAWhatsApp(producto.numeroWhatsApp ?? '0000000000')"> -->
-          <div class="card-hover-overlay" (click)="irAWhatsApp('')">
-            <span>Escríbenos en las redes</span>
+          <div class="card-hover-overlay" (click)="irAWhatsApp('55716314')">
+            <span>Escríbenos por Whatsapp</span>
           </div>
           <div *ngIf="producto.esNuevo" class="nuevo-badge" [ngStyle]="{ 'background-color': producto.colorFondoNuevo, 'transform': 'rotate(' + producto.rotacionNuevo + ')' }">
             {{ producto.mensajeNuevo }}
