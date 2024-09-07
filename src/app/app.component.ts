@@ -26,12 +26,12 @@ export class AppComponent implements OnInit {
   
   contacts = [
     { info: "Whatsapp", phone: "5571-6314" },
-    { info: "Servicio a Domicilio", phone: "5571-6314" }
+    { info: "Servicio a Domicilio", phone: "5571-4314" }
   ];
   
   operatingHours = [
-    { days: "Martes a Viernes", time: "9AM-8PM" },
-    { days: "Sábados y Domingos", time: "10AM-5PM" }
+    { days: "Lunes a Viernes", time: "9AM-8PM" },
+    { days: "Sábados y Domingos", time: "10AM-7PM" }
   ];
   
   
