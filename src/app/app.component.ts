@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   ];
   
   contacts = [
-    { info: "Whatsapp", phone: "5571-6314" },
+    { info: "Whatsapp", phone: "5571-4314" },
     { info: "Servicio a Domicilio", phone: "5571-4314" }
   ];
   
